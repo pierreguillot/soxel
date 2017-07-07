@@ -1,0 +1,395 @@
+#N struct 2202-t-scope float x array cells 2202-t-scope-value;
+#N struct 2202-t-scope-value float x1 float y1 float x2 float y2 float
+c1 float c2;
+#N struct 2384-t-scope float x array cells 2384-t-scope-value;
+#N struct 2384-t-scope-value float x1 float y1 float x2 float y2 float
+c1 float c2;
+#N canvas 236 23 584 769 10;
+#X declare -stdpath spam;
+#N canvas 0 22 223 200 \$0-scope 0;
+#X scalar 2202-t-scope 0 \; -1 1 -0.6 0.6 990 0 \; -0.6 1 -0.2 0.6
+950 0 \; -0.2 1 0.2 0.6 950 0 \; 0.2 1 0.6 0.6 90 0 \; 0.6 1 1 0.6
+950 0 \; -1 0.6 -0.6 0.2 90 0 \; -0.6 0.6 -0.2 0.2 950 0 \; -0.2 0.6
+0.2 0.2 90 0 \; 0.2 0.6 0.6 0.2 990 0 \; 0.6 0.6 1 0.2 950 0 \; -1
+0.2 -0.6 -0.2 950 0 \; -0.6 0.2 -0.2 -0.2 999 0 \; -0.2 0.2 0.2 -0.2
+999 0 \; 0.2 0.2 0.6 -0.2 90 0 \; 0.6 0.2 1 -0.2 990 0 \; -1 -0.2 -0.6
+-0.6 90 0 \; -0.6 -0.2 -0.2 -0.6 999 0 \; -0.2 -0.2 0.2 -0.6 999 0
+\; 0.2 -0.2 0.6 -0.6 999 0 \; 0.6 -0.2 1 -0.6 990 0 \; -1 -0.6 -0.6
+-1 950 0 \; -0.6 -0.6 -0.2 -1 999 0 \; -0.2 -0.6 0.2 -1 999 0 \; 0.2
+-0.6 0.6 -1 90 0 \; 0.6 -0.6 1 -1 950 0 \; \;;
+#X coords -1 1 1 -1 214 214 2 100 100;
+#X restore 45 437 pd \$0-scope;
+#X obj 45 546 spam~ 25 xel.2d.gui.scope~ 5 5 \$0-scope \$0-config,
+f 35;
+#X obj 418 29 text define -k \$0-config;
+#A set rolloff 8 \; blur 0.1 \; positions -0.530331 0.530329 -0.75
+-1.67489e-06 -0.530329 -0.530332 2.51234e-06 -0.75 0.530332 -0.530328
+0.75 3.34978e-06 0.530328 0.530333 -4.18723e-06 0.75 \; gain 150 \;
+;
+#N canvas 453 135 674 485 init 0;
+#X obj 13 42 loadbang;
+#X obj 13 86 s \$0-gain;
+#X obj 89 42 loadbang;
+#X obj 53 201 loadbang;
+#X obj 89 87 s \$0-pos;
+#X msg 89 64 list 0 0;
+#X obj 269 42 loadbang;
+#X msg 269 64 list 0 0;
+#X obj 269 87 s \$0-coord;
+#X obj 132 112 loadbang;
+#X msg 132 134 0;
+#X obj 132 156 s \$0-hardness;
+#X obj 222 112 loadbang;
+#X obj 222 156 s \$0-opacity;
+#X msg 222 134 100;
+#X obj 302 112 loadbang;
+#X obj 302 156 s \$0-size;
+#X msg 13 64 60;
+#X msg 302 134 1.7;
+#X obj 53 286 s \$0-mats;
+#X msg 168 281 2 matrix 5 5 0 0 0 0 0 0 0 0 0 0 0 0.25 0 0.51 0 0.21
+0.6 0.63 0 0 0.45 0.42 0.73 0.5 0.48;
+#X msg 547 539 1 matrix 5 5 0.18 0.32 0.34 0.12 0 0.12 0.57 0 0 0 0.44
+0 0.39 0 0 0 0 0 0 0 0 0 0 0 0;
+#X msg 53 228 1 matrix 5 5 0.18 0.32 0.34 0.12 0 0.12 0.57 0 0 0 0.44
+0 0.39 0 0 0 0 0 0 0 0 0 0 0 0;
+#X msg 195 341 3 matrix 5 5 0 0 0 0 0.45 0 0 0.13 0.27 0.4 0 0 0 0
+0.32 0 0 0 0.09 0.28 0 0 0 0 0;
+#X connect 0 0 17 0;
+#X connect 2 0 5 0;
+#X connect 3 0 22 0;
+#X connect 3 0 20 0;
+#X connect 3 0 23 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 12 0 14 0;
+#X connect 14 0 13 0;
+#X connect 15 0 18 0;
+#X connect 17 0 1 0;
+#X connect 18 0 16 0;
+#X connect 20 0 19 0;
+#X connect 22 0 19 0;
+#X connect 23 0 19 0;
+#X restore 418 7 pd init;
+#X obj 45 661 spam~ 25 xel.2d.proj.dbap~ 5 5 8 \$0-config, f 35;
+#X obj 418 50 declare -stdpath spam;
+#X obj 5 7 xel.header xel.2d.fx.eraser~;
+#X obj 4 723 xel.footer;
+#X obj 252 390 r \$0-eraser;
+#X obj 332 148 tgl 15 0 empty \$0-auto empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X msg 335 479 opacity \$1;
+#X obj 335 457 nbx 5 14 0 100 0 0 empty \$0-opacity empty 0 -8 0 10
+-262144 -1 -1 100 256;
+#X obj 332 369 nbx 5 14 0 100 0 0 empty \$0-hardness empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#X msg 332 388 hardness \$1;
+#X obj 333 276 nbx 5 14 1 10 0 0 empty \$0-size empty 0 -8 0 10 -262144
+-1 -1 1.69 256;
+#X msg 333 295 size \$1;
+#X text 332 257 Size (min 1);
+#X text 332 349 Hardness (0 to 100);
+#X text 335 438 Opacity (0 to 100);
+#X text 339 186 Coordinates (-1 to 1);
+#N canvas 0 22 573 343 traj 0;
+#X obj 54 191 t f f, f 15;
+#X obj 54 279 pack f f, f 15;
+#X obj 54 237 * 6.28319;
+#X obj 141 237 * 6.28319;
+#X obj 54 128 line 0;
+#X obj 54 257 sin;
+#X obj 141 257 sin;
+#X obj 54 215 * 3;
+#X obj 141 215 * 1;
+#X msg 54 104 \$1 \, 1 10000;
+#X obj 54 80 f 0;
+#X obj 144 96 sel 1;
+#X msg 17 104 stop;
+#X obj 17 53 sel 0 1, f 13;
+#X obj 144 118 f 0;
+#X obj 17 25 inlet;
+#X obj 54 301 outlet;
+#X connect 0 0 7 0;
+#X connect 0 1 8 0;
+#X connect 1 0 16 0;
+#X connect 2 0 5 0;
+#X connect 3 0 6 0;
+#X connect 4 0 0 0;
+#X connect 4 0 11 0;
+#X connect 5 0 1 0;
+#X connect 6 0 1 1;
+#X connect 7 0 2 0;
+#X connect 8 0 3 0;
+#X connect 9 0 4 0;
+#X connect 10 0 9 0;
+#X connect 11 0 14 0;
+#X connect 11 1 10 1;
+#X connect 12 0 4 0;
+#X connect 13 0 12 0;
+#X connect 13 1 10 0;
+#X connect 14 0 10 0;
+#X connect 15 0 13 0;
+#X restore 332 169 pd traj;
+#X obj 335 501 s \$0-eraser;
+#X obj 332 410 s \$0-eraser;
+#X obj 332 226 s \$0-eraser;
+#X obj 333 317 s \$0-eraser;
+#X obj 45 703 dac~ 1 2 3 4 5 6 7 8, f 35;
+#X obj 45 414 spam~ 25 xel.2d.fx.eraser~ 5 5, f 35;
+#N canvas 217 367 450 300 pos 0;
+#X obj 145 100 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.137788 256;
+#X obj 100 100 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.4029 256;
+#X obj 119 77 t b f;
+#X obj 101 150 pack 1 f;
+#X obj 101 18 r \$0-pos;
+#X obj 101 40 unpack f f;
+#X obj 101 172 outlet;
+#X obj 164 19 inlet;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 2 1 3 1;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 5 1 0 0;
+#X connect 7 0 5 0;
+#X coords 0 -1 1 1 90 14 2 100 100;
+#X restore 332 203 pd pos;
+#X obj 443 79 xel.dsp~;
+#X text 4 31 The abstraction decreases the amplitude of the signals
+of a set of cells of a matrix to erase or attenuate some parts of the
+sound space. The behavior is similar to xel.2d.syn.brush~ except that
+instead a synthesing signals \, the abstractions decreases and mutes
+the signals., f 67;
+#N canvas 0 22 126 216 source1 0;
+#X obj 28 74 *~;
+#X obj 13 107 *~;
+#X obj 40 97 nbx 5 14 0 100 0 0 empty \$0-gain empty 0 -8 0 10 -262144
+-1 -1 60 256;
+#X obj 13 141 *~, f 5;
+#N canvas 0 22 450 300 gain 0;
+#X obj 10 45 dbtorms;
+#X obj 10 67 pack f 20;
+#X obj 10 89 line~;
+#X obj 10 25 inlet;
+#X obj 10 111 outlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X restore 40 117 pd gain;
+#X obj 28 52 osc~ 5;
+#X obj 13 163 outlet~;
+#X obj 13 29 osc~ 256;
+#X connect 0 0 1 1;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 6 0;
+#X connect 4 0 3 1;
+#X connect 5 0 0 0;
+#X connect 5 0 0 1;
+#X connect 7 0 1 0;
+#X restore 45 121 pd source1;
+#X obj 45 148 spam~ 25 xel.2d.syn.pencil~ 5 5 3, f 34;
+#N canvas 0 22 136 211 source2 0;
+#X obj 23 67 *~;
+#X obj 8 100 *~;
+#X obj 35 90 nbx 5 14 0 100 0 0 empty \$0-gain empty 0 -8 0 10 -262144
+-1 -1 60 256;
+#X obj 8 134 *~, f 5;
+#N canvas 0 22 450 300 gain 0;
+#X obj 10 45 dbtorms;
+#X obj 10 67 pack f 20;
+#X obj 10 89 line~;
+#X obj 10 25 inlet;
+#X obj 10 111 outlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X restore 35 110 pd gain;
+#X obj 23 45 osc~ 5;
+#X obj 8 22 phasor~ 220;
+#X obj 8 156 outlet~;
+#X connect 0 0 1 1;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 7 0;
+#X connect 4 0 3 1;
+#X connect 5 0 0 0;
+#X connect 5 0 0 1;
+#X connect 6 0 1 0;
+#X restore 112 121 pd source2;
+#N canvas 0 22 157 202 source3 0;
+#X obj 37 67 *~;
+#X obj 22 100 *~;
+#X obj 49 90 nbx 5 14 0 100 0 0 empty \$0-gain empty 0 -8 0 10 -262144
+-1 -1 60 256;
+#X obj 22 134 *~, f 5;
+#N canvas 0 22 450 300 gain 0;
+#X obj 10 45 dbtorms;
+#X obj 10 67 pack f 20;
+#X obj 10 89 line~;
+#X obj 10 25 inlet;
+#X obj 10 111 outlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X restore 49 110 pd gain;
+#X obj 37 45 osc~ 5;
+#X obj 22 22 phasor~ 356;
+#X obj 22 156 outlet~;
+#X connect 0 0 1 1;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 7 0;
+#X connect 4 0 3 1;
+#X connect 5 0 0 0;
+#X connect 5 0 0 1;
+#X connect 6 0 1 0;
+#X restore 179 121 pd source3;
+#X obj 246 121 r \$0-mats;
+#N canvas 0 22 450 300 \$0-scope-pre 0;
+#X scalar 2384-t-scope 0 \; -1 1 -0.6 0.6 990 0 \; -0.6 1 -0.2 0.6
+950 0 \; -0.2 1 0.2 0.6 950 0 \; 0.2 1 0.6 0.6 90 0 \; 0.6 1 1 0.6
+950 0 \; -1 0.6 -0.6 0.2 90 0 \; -0.6 0.6 -0.2 0.2 900 0 \; -0.2 0.6
+0.2 0.2 90 0 \; 0.2 0.6 0.6 0.2 990 0 \; 0.6 0.6 1 0.2 950 0 \; -1
+0.2 -0.6 -0.2 950 0 \; -0.6 0.2 -0.2 -0.2 990 0 \; -0.2 0.2 0.2 -0.2
+950 0 \; 0.2 0.2 0.6 -0.2 950 0 \; 0.6 0.2 1 -0.2 990 0 \; -1 -0.2
+-0.6 -0.6 990 0 \; -0.6 -0.2 -0.2 -0.6 950 0 \; -0.2 -0.2 0.2 -0.6
+950 0 \; 0.2 -0.2 0.6 -0.6 90 0 \; 0.6 -0.2 1 -0.6 990 0 \; -1 -0.6
+-0.6 -1 950 0 \; -0.6 -0.6 -0.2 -1 950 0 \; -0.2 -0.6 0.2 -1 900 0
+\; 0.2 -0.6 0.6 -1 950 0 \; 0.6 -0.6 1 -1 950 0 \; \;;
+#X coords -1 1 1 -1 214 214 2 100 100;
+#X restore 43 171 pd \$0-scope-pre;
+#X obj 45 182 spam~ 25 xel.2d.gui.scope~ 5 5 \$0-scope-pre \$0-config
+, f 34;
+#X connect 4 0 25 0;
+#X connect 4 1 25 1;
+#X connect 4 2 25 2;
+#X connect 4 3 25 3;
+#X connect 4 4 25 4;
+#X connect 4 5 25 5;
+#X connect 4 6 25 6;
+#X connect 4 7 25 7;
+#X connect 8 0 26 25;
+#X connect 9 0 20 0;
+#X connect 10 0 21 0;
+#X connect 11 0 10 0;
+#X connect 12 0 13 0;
+#X connect 13 0 22 0;
+#X connect 14 0 15 0;
+#X connect 15 0 24 0;
+#X connect 20 0 27 0;
+#X connect 26 0 1 0;
+#X connect 26 0 4 0;
+#X connect 26 1 1 1;
+#X connect 26 1 4 1;
+#X connect 26 2 1 2;
+#X connect 26 2 4 2;
+#X connect 26 3 1 3;
+#X connect 26 3 4 3;
+#X connect 26 4 1 4;
+#X connect 26 4 4 4;
+#X connect 26 5 1 5;
+#X connect 26 5 4 5;
+#X connect 26 6 1 6;
+#X connect 26 6 4 6;
+#X connect 26 7 1 7;
+#X connect 26 7 4 7;
+#X connect 26 8 1 8;
+#X connect 26 8 4 8;
+#X connect 26 9 1 9;
+#X connect 26 9 4 9;
+#X connect 26 10 1 10;
+#X connect 26 10 4 10;
+#X connect 26 11 1 11;
+#X connect 26 11 4 11;
+#X connect 26 12 1 12;
+#X connect 26 12 4 12;
+#X connect 26 13 1 13;
+#X connect 26 13 4 13;
+#X connect 26 14 1 14;
+#X connect 26 14 4 14;
+#X connect 26 15 1 15;
+#X connect 26 15 4 15;
+#X connect 26 16 1 16;
+#X connect 26 16 4 16;
+#X connect 26 17 1 17;
+#X connect 26 17 4 17;
+#X connect 26 18 1 18;
+#X connect 26 18 4 18;
+#X connect 26 19 1 19;
+#X connect 26 19 4 19;
+#X connect 26 20 1 20;
+#X connect 26 20 4 20;
+#X connect 26 21 1 21;
+#X connect 26 21 4 21;
+#X connect 26 22 1 22;
+#X connect 26 22 4 22;
+#X connect 26 23 1 23;
+#X connect 26 23 4 23;
+#X connect 26 24 1 24;
+#X connect 26 24 4 24;
+#X connect 27 0 23 0;
+#X connect 30 0 31 0;
+#X connect 31 0 26 0;
+#X connect 31 0 36 0;
+#X connect 31 1 26 1;
+#X connect 31 1 36 1;
+#X connect 31 2 26 2;
+#X connect 31 2 36 2;
+#X connect 31 3 26 3;
+#X connect 31 3 36 3;
+#X connect 31 4 26 4;
+#X connect 31 4 36 4;
+#X connect 31 5 26 5;
+#X connect 31 5 36 5;
+#X connect 31 6 26 6;
+#X connect 31 6 36 6;
+#X connect 31 7 26 7;
+#X connect 31 7 36 7;
+#X connect 31 8 26 8;
+#X connect 31 8 36 8;
+#X connect 31 9 26 9;
+#X connect 31 9 36 9;
+#X connect 31 10 26 10;
+#X connect 31 10 36 10;
+#X connect 31 11 26 11;
+#X connect 31 11 36 11;
+#X connect 31 12 26 12;
+#X connect 31 12 36 12;
+#X connect 31 13 26 13;
+#X connect 31 13 36 13;
+#X connect 31 14 26 14;
+#X connect 31 14 36 14;
+#X connect 31 15 26 15;
+#X connect 31 15 36 15;
+#X connect 31 16 26 16;
+#X connect 31 16 36 16;
+#X connect 31 17 26 17;
+#X connect 31 17 36 17;
+#X connect 31 18 26 18;
+#X connect 31 18 36 18;
+#X connect 31 19 26 19;
+#X connect 31 19 36 19;
+#X connect 31 20 26 20;
+#X connect 31 20 36 20;
+#X connect 31 21 26 21;
+#X connect 31 21 36 21;
+#X connect 31 22 26 22;
+#X connect 31 22 36 22;
+#X connect 31 23 26 23;
+#X connect 31 23 36 23;
+#X connect 31 24 26 24;
+#X connect 31 24 36 24;
+#X connect 32 0 31 1;
+#X connect 33 0 31 2;
+#X connect 34 0 31 3;

@@ -1,0 +1,29 @@
+#N canvas 435 121 520 448 10;
+#X obj 6 7 xel.header xel.preset;
+#X obj 6 416 xel.footer;
+#X obj 53 255 list prepend set;
+#X obj 53 277 list trim;
+#X msg 53 299 matrix 5 5 0 0 0 0 0.87 0 0 0 0.64 0 0 0 0.82 0 0 0 0.79
+0 0 0 1.11 0 0 0 0, f 38;
+#X msg 53 189 store \$1;
+#X text 53 115 Store a state;
+#X text 24 359 Use -k to save the history with the patch, f 25;
+#X text 127 172 Recall a state;
+#X obj 356 136 loadbang;
+#X text 4 31 The abstraction allows to save and to recall an history
+of matrices of coefficients. The arguments defines the name of the
+text objet that is used to store the history., f 66;
+#X text 4 71 When a new matrix is stored if its index is beyond the
+current number of stored matrices \, the abstraction fills the empty
+slots with the last matrice., f 66;
+#X symbolatom 130 190 10 0 0 0 - - -, f 10;
+#X symbolatom 53 172 10 0 0 0 - - -, f 10;
+#X obj 24 389 text define -k \$0-presets;
+#A set;
+#X obj 53 225 xel.preset \$0-presets;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 15 0;
+#X connect 12 0 15 0;
+#X connect 13 0 5 0;
+#X connect 15 0 2 0;

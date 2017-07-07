@@ -1,0 +1,154 @@
+#N struct 1034-stuct-matrix float x1 float y1 float x2 float y2 float
+xv float yv float c1 float c2 float val float index;
+#N struct 1024-stuct-matrix float x1 float y1 float x2 float y2 float
+xv float yv float c1 float c2 float val float index;
+#N canvas 180 23 1220 813 10;
+#X obj 6 7 xel.header xel.2d.art;
+#N canvas 0 22 1029 742 \$0-canvas 0;
+#X scalar 1034-stuct-matrix -1 1 -0.6 0.6 -0.9 0.8 999 0 17 0 \;;
+#X scalar 1034-stuct-matrix -0.6 1 -0.2 0.6 -0.5 0.8 999 0 17 1 \;
+;
+#X scalar 1034-stuct-matrix -0.2 1 0.2 0.6 -0.1 0.8 999 0 17 2 \;;
+#X scalar 1034-stuct-matrix 0.2 1 0.6 0.6 0.3 0.8 999 0 17 3 \;;
+#X scalar 1034-stuct-matrix 0.6 1 1 0.6 0.7 0.8 999 0 48 4 \;;
+#X scalar 1034-stuct-matrix -1 0.6 -0.6 0.2 -0.9 0.4 999 0 17 5 \;
+;
+#X scalar 1034-stuct-matrix -0.6 0.6 -0.2 0.2 -0.5 0.4 999 0 17 6 \;
+;
+#X scalar 1034-stuct-matrix -0.2 0.6 0.2 0.2 -0.1 0.4 999 0 35 7 \;
+;
+#X scalar 1034-stuct-matrix 0.2 0.6 0.6 0.2 0.3 0.4 999 0 26 8 \;;
+#X scalar 1034-stuct-matrix 0.6 0.6 1 0.2 0.7 0.4 999 0 48 9 \;;
+#X scalar 1034-stuct-matrix -1 0.2 -0.6 -0.2 -0.9 -1.49012e-08 999
+0 35 10 \;;
+#X scalar 1034-stuct-matrix -0.6 0.2 -0.2 -0.2 -0.5 -1.49012e-08 999
+0 26 11 \;;
+#X scalar 1034-stuct-matrix -0.2 0.2 0.2 -0.2 -0.1 -1.49012e-08 999
+0 17 12 \;;
+#X scalar 1034-stuct-matrix 0.2 0.2 0.6 -0.2 0.3 -1.49012e-08 999 0
+56 13 \;;
+#X scalar 1034-stuct-matrix 0.6 0.2 1 -0.2 0.7 -1.49012e-08 999 0 17
+14 \;;
+#X scalar 1034-stuct-matrix -1 -0.2 -0.6 -0.6 -0.9 -0.4 999 0 17 15
+\;;
+#X scalar 1034-stuct-matrix -0.6 -0.2 -0.2 -0.6 -0.5 -0.4 999 0 24
+16 \;;
+#X scalar 1034-stuct-matrix -0.2 -0.2 0.2 -0.6 -0.1 -0.4 999 0 48 17
+\;;
+#X scalar 1034-stuct-matrix 0.2 -0.2 0.6 -0.6 0.3 -0.4 999 0 35 18
+\;;
+#X scalar 1034-stuct-matrix 0.6 -0.2 1 -0.6 0.7 -0.4 999 0 26 19 \;
+;
+#X scalar 1034-stuct-matrix -1 -0.6 -0.6 -1 -0.9 -0.8 999 0 17 20 \;
+;
+#X scalar 1034-stuct-matrix -0.6 -0.6 -0.2 -1 -0.5 -0.8 999 0 48 21
+\;;
+#X scalar 1034-stuct-matrix -0.2 -0.6 0.2 -1 -0.1 -0.8 999 0 17 22
+\;;
+#X scalar 1034-stuct-matrix 0.2 -0.6 0.6 -1 0.3 -0.8 999 0 17 23 \;
+;
+#X scalar 1034-stuct-matrix 0.6 -0.6 1 -1 0.7 -0.8 999 0 24 24 \;;
+#X coords -1 1 1 -1 270 270 2 100 100;
+#X restore 129 60 pd \$0-canvas;
+#X obj 239 524 r \$0-in;
+#X obj 416 598 pack f f 1;
+#X obj 416 644 list trim;
+#X obj 733 9 text define -k \$0-pattern;
+#A set;
+#X obj 733 31 r \$0-pattern-history;
+#X obj 6 30 art/pattern;
+#X obj 239 555 xel.2d.mat.brush 11 11;
+#X obj 239 577 xel.2d.gui.mat \$0-canvas 11 11;
+#X obj 130 375 hradio 15 1 0 3 \$0-frame-recall-r \$0-frame-recall-r2
+empty 0 -8 0 10 -262144 -1 -1 4.24242;
+#X obj 129 336 hradio 15 1 0 18 \$0-frame-store-s \$0-frame-store-r
+empty 0 -8 0 10 -191407 -1 -1 2;
+#X obj 466 460 text define -k \$0-frame;
+#A set matrix 5 5 0.42 0.12 0 0 0 0.29 0.49 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 \; matrix 5 5 0.42 0.12 0 0 1.16 0.29 0.49 0 0 1.16 0 0
+0 1.16 0 0 0 1.16 0 0 0 1.16 0 0 0 \; matrix 5 5 0 0 0 0 1.16 0 0 0.68
+0.34 1.16 0.68 0.34 0 1.42 0 0 0.26 1.16 0.68 0.34 0 1.16 0 0 0.26
+\;;
+#X obj 734 246 text size \$0-frame;
+#X msg 734 268 number \$1;
+#X obj 200 627 s \$0-frame-recall-r;
+#X obj 200 414 r \$0-frame-store-s;
+#X obj 239 482 xel.2d.mat.history \$0-frame;
+#X msg 239 459 store \$1;
+#X obj 132 355 hsl 265 15 0 20 0 0 \$0-frame-recall-s \$0-frame-recall-r
+empty -2 -8 0 10 -262144 -1 -1 5600 1;
+#X obj 734 202 r \$0-update;
+#X obj 734 224 bang;
+#X obj 452 493 s \$0-update;
+#X obj 200 436 t f b f;
+#X obj 219 604 s \$0-update;
+#X msg 110 402 set \$1;
+#X obj 734 290 s \$0-frame-recall-r2;
+#X obj 300 458 r \$0-frame-recall-s;
+#X obj 6 467 s \$0-in;
+#X obj 13 377 nbx 5 14 -1e+37 1e+37 0 0 \$0-filling-factor-s \$0-filling-factor-r
+empty 0 -8 0 10 -262144 -1 -1 1 256;
+#X obj 14 290 vradio 15 1 0 4 \$0-filling-mode-s \$0-filling-mode-r
+empty 0 -8 0 10 -262144 -1 -1 0;
+#X text 33 288 fill;
+#X text 33 303 replace;
+#X text 33 319 add;
+#X text 33 335 subtract;
+#X obj 416 666 s \$0-in;
+#X text 12 270 Filling Mode;
+#N canvas 0 22 450 300 format 0;
+#X msg 60 85 fill;
+#X msg 95 84 replace;
+#X msg 107 111 add;
+#X obj 60 63 sel 0 1 2;
+#X msg 141 120 subtract;
+#X obj 59 43 inlet;
+#X obj 78 173 outlet;
+#X connect 0 0 6 0;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 0 0;
+#X connect 3 1 1 0;
+#X connect 3 2 2 0;
+#X connect 3 3 4 0;
+#X connect 4 0 6 0;
+#X connect 5 0 3 0;
+#X restore 485 598 pd format;
+#X obj 416 622 list prepend;
+#X obj 485 575 r \$0-filling-mode-s;
+#X obj 17 632 loadbang;
+#X obj 17 676 s \$0-filling-mode-r;
+#X msg 17 654 0;
+#X msg 47 654 1;
+#X text 12 357 Filling Mode;
+#X obj 473 550 r \$0-filling-factor-s;
+#X obj 47 699 s \$0-filling-factor-r;
+#X connect 2 0 8 0;
+#X connect 3 0 38 0;
+#X connect 4 0 35 0;
+#X connect 7 0 28 0;
+#X connect 8 0 9 0;
+#X connect 9 0 17 0;
+#X connect 9 1 3 0;
+#X connect 12 1 22 0;
+#X connect 13 0 14 0;
+#X connect 14 0 26 0;
+#X connect 16 0 23 0;
+#X connect 17 0 8 0;
+#X connect 18 0 17 0;
+#X connect 19 0 25 0;
+#X connect 20 0 21 0;
+#X connect 21 0 13 0;
+#X connect 23 0 15 0;
+#X connect 23 1 24 0;
+#X connect 23 2 18 0;
+#X connect 25 0 10 0;
+#X connect 27 0 17 0;
+#X connect 37 0 38 1;
+#X connect 38 0 4 0;
+#X connect 39 0 37 0;
+#X connect 40 0 42 0;
+#X connect 40 0 43 0;
+#X connect 42 0 41 0;
+#X connect 43 0 46 0;
+#X connect 45 0 3 2;

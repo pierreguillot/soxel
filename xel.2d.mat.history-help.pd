@@ -1,0 +1,91 @@
+#N struct 1014-stuct-matrix float x1 float y1 float x2 float y2 float
+xv float yv float c1 float c2 float val float index;
+#N canvas 435 121 520 448 10;
+#X obj 6 7 xel.header xel.2d.mat.history;
+#X obj 6 416 xel.footer;
+#N canvas 0 22 1029 742 \$0-canvas 0;
+#X scalar 1014-stuct-matrix -1 1 -0.6 0.6 -0.9 0.8 999 0 0 0 \;;
+#X scalar 1014-stuct-matrix -0.6 1 -0.2 0.6 -0.5 0.8 999 0 0 1 \;;
+#X scalar 1014-stuct-matrix -0.2 1 0.2 0.6 -0.1 0.8 999 0 0 2 \;;
+#X scalar 1014-stuct-matrix 0.2 1 0.6 0.6 0.3 0.8 999 0 0 3 \;;
+#X scalar 1014-stuct-matrix 0.6 1 1 0.6 0.7 0.8 999 0 87 4 \;;
+#X scalar 1014-stuct-matrix -1 0.6 -0.6 0.2 -0.9 0.4 999 0 0 5 \;;
+#X scalar 1014-stuct-matrix -0.6 0.6 -0.2 0.2 -0.5 0.4 999 0 0 6 \;
+;
+#X scalar 1014-stuct-matrix -0.2 0.6 0.2 0.2 -0.1 0.4 999 0 0 7 \;
+;
+#X scalar 1014-stuct-matrix 0.2 0.6 0.6 0.2 0.3 0.4 999 0 64 8 \;;
+#X scalar 1014-stuct-matrix 0.6 0.6 1 0.2 0.7 0.4 999 0 0 9 \;;
+#X scalar 1014-stuct-matrix -1 0.2 -0.6 -0.2 -0.9 -1.49012e-08 999
+0 0 10 \;;
+#X scalar 1014-stuct-matrix -0.6 0.2 -0.2 -0.2 -0.5 -1.49012e-08 999
+0 0 11 \;;
+#X scalar 1014-stuct-matrix -0.2 0.2 0.2 -0.2 -0.1 -1.49012e-08 999
+0 82 12 \;;
+#X scalar 1014-stuct-matrix 0.2 0.2 0.6 -0.2 0.3 -1.49012e-08 999 0
+0 13 \;;
+#X scalar 1014-stuct-matrix 0.6 0.2 1 -0.2 0.7 -1.49012e-08 999 0 0
+14 \;;
+#X scalar 1014-stuct-matrix -1 -0.2 -0.6 -0.6 -0.9 -0.4 999 0 0 15
+\;;
+#X scalar 1014-stuct-matrix -0.6 -0.2 -0.2 -0.6 -0.5 -0.4 999 0 79
+16 \;;
+#X scalar 1014-stuct-matrix -0.2 -0.2 0.2 -0.6 -0.1 -0.4 999 0 0 17
+\;;
+#X scalar 1014-stuct-matrix 0.2 -0.2 0.6 -0.6 0.3 -0.4 999 0 0 18 \;
+;
+#X scalar 1014-stuct-matrix 0.6 -0.2 1 -0.6 0.7 -0.4 999 0 0 19 \;
+;
+#X scalar 1014-stuct-matrix -1 -0.6 -0.6 -1 -0.9 -0.8 999 0 111 20
+\;;
+#X scalar 1014-stuct-matrix -0.6 -0.6 -0.2 -1 -0.5 -0.8 999 0 0 21
+\;;
+#X scalar 1014-stuct-matrix -0.2 -0.6 0.2 -1 -0.1 -0.8 999 0 0 22 \;
+;
+#X scalar 1014-stuct-matrix 0.2 -0.6 0.6 -1 0.3 -0.8 999 0 0 23 \;
+;
+#X scalar 1014-stuct-matrix 0.6 -0.6 1 -1 0.7 -0.8 999 0 0 24 \;;
+#X coords -1 1 1 -1 201 201 2 100 100;
+#X restore 8 150 pd \$0-canvas;
+#X obj 223 277 list prepend set;
+#X obj 223 299 list trim;
+#X msg 223 321 matrix 5 5 0 0 0 0 0.87 0 0 0 0.64 0 0 0 0.82 0 0 0
+0.79 0 0 0 1.11 0 0 0 0, f 38;
+#X obj 223 161 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 7;
+#X obj 232 240 xel.2d.gui.mat \$0-canvas 5 5;
+#X obj 24 389 text define -k \$0-history;
+#A set matrix 5 5 0 0 0 0 0.87 0 0 0 0.64 0 0 0 0.82 0 0 0 0.79 0 0
+0 1.11 0 0 0 0 \; matrix 5 5 0 0 0 0 0.87 0 0 0.45 0 0 0 0.42 0 0.89
+0 0.65 0 0.34 0 0 0 0.78 0 0 0 \; matrix 5 5 0 0 0 0 0 0.25 0.08 0.88
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \; matrix 5 5 1 0.75 0.2 0 0 0.75
+0.33 0 0 0 0.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \;;
+#X msg 223 181 store \$1;
+#X obj 356 186 nbx 5 14 0 8 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 356 161 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 223 217 xel.2d.mat.history \$0-history;
+#X text 223 137 Store a state;
+#X text 24 359 Use -k to save the history with the patch, f 25;
+#X text 375 138 Recall a state;
+#X text 416 185 Use decimal numbers to interpolate, f 12;
+#X obj 356 116 loadbang;
+#X text 36 119 Use the interface to change the coefficients, f 24
+;
+#X text 4 31 The abstraction allows to save and to recall an history
+of matrices of coefficients. The arguments defines the name of the
+text objet that is used to store the history., f 66;
+#X text 4 71 When a new matrix is stored if its index is beyond the
+current number of stored matrices \, the abstraction fills the empty
+slots with the last matrice., f 66;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 9 0;
+#X connect 7 0 12 0;
+#X connect 9 0 12 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 12 0 7 0;
+#X connect 12 0 3 0;
+#X connect 17 0 11 0;
