@@ -1,0 +1,4 @@
+pen 1 0 matrix 1 1 1;
+rubber 1 1 matrix 1 1 0;
+brush 1 0 matrix 3 3 0.05 0.05 0.05 0.05 0.6 0.05 0.05 0.05 0.05;
+eraser 1 1 matrix 3 3 0 0 0 0 0 0 0 0 0;

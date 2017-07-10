@@ -1,0 +1,108 @@
+#N struct 1099-stuct-matrix float x1 float y1 float x2 float y2 float
+xv float yv float c1 float c2 float val float index;
+#N canvas 183 178 558 412 10;
+#X declare -path ../;
+#N canvas 0 22 450 300 \$0-pattern-gui 0;
+#X scalar 1099-stuct-matrix -1 1 -0.333333 0.333333 -0.833333 0.666667
+999 0 0 0 \;;
+#X scalar 1099-stuct-matrix -0.333333 1 0.333333 0.333333 -0.166667
+0.666667 999 0 0 1 \;;
+#X scalar 1099-stuct-matrix 0.333333 1 1 0.333333 0.5 0.666667 999
+0 0 2 \;;
+#X scalar 1099-stuct-matrix -1 0.333333 -0.333333 -0.333333 -0.833333
+-2.98023e-08 999 0 0 3 \;;
+#X scalar 1099-stuct-matrix -0.333333 0.333333 0.333333 -0.333333 -0.166667
+-2.98023e-08 999 0 0 4 \;;
+#X scalar 1099-stuct-matrix 0.333333 0.333333 1 -0.333333 0.5 -2.98023e-08
+999 0 0 5 \;;
+#X scalar 1099-stuct-matrix -1 -0.333333 -0.333333 -1 -0.833333 -0.666667
+999 0 0 6 \;;
+#X scalar 1099-stuct-matrix -0.333333 -0.333333 0.333333 -1 -0.166667
+-0.666667 999 0 0 7 \;;
+#X scalar 1099-stuct-matrix 0.333333 -0.333333 1 -1 0.5 -0.666667 999
+0 0 8 \;;
+#X coords -1 1 1 -1 90 90 2 100 100;
+#X restore 14 101 pd \$0-pattern-gui;
+#X obj 123 296 list prepend pattern;
+#X obj 123 318 list trim;
+#X obj 123 276 list split 1;
+#X obj 123 38 text define -k \$0-pattern;
+#A set matrix 3 3 0 0 0 0 0 0 0 0 0 \;;
+#X obj 123 111 xel.2d.mat.history \$0-pattern;
+#X obj 14 222 hradio 15 1 0 6 \$0-pattern-history-save-s \$0-pattern-history-save-r
+empty 0 -8 0 10 -262144 -1 -262144 0;
+#X msg 123 88 store \$1;
+#X obj 203 15 declare -path ../;
+#X text 13 13 Pattern Manager;
+#X obj 76 83 nbx 2 14 1 25 0 0 \$0-ncols-s \$0-ncols-r empty 0 -8 0
+10 -262144 -1 -1 3 256;
+#X obj 46 83 nbx 2 14 1 25 0 0 \$0-nrows-s \$0-nrows-r empty 0 -8 0
+10 -262144 -1 -1 3 256;
+#X obj 14 55 hradio 15 1 0 6 \$0-pattern-history-recall-s \$0-pattern-history-recall-r
+empty 0 -8 0 10 -262144 -1 -1 1;
+#X obj 123 66 r \$0-pattern-history-save-s;
+#X obj 183 88 r \$0-pattern-history-recall-s;
+#X obj 327 32 loadbang;
+#X obj 327 54 s \$0-pattern-history-recall-r;
+#X obj 123 254 xel.2d.gui.mat \$0-pattern-gui 1 1;
+#X msg 316 111 loadbang;
+#X msg 316 133 matrix 1 1 1;
+#X obj 348 199 r \$0-nrows-s;
+#X obj 429 199 r \$0-ncols-s;
+#X obj 348 221 pack f f, f 14;
+#X obj 348 243 list prepend matrix;
+#X obj 348 265 list trim;
+#X text 12 82 Size:;
+#X obj 410 82 loadbang;
+#X obj 410 124 s \$0-nrows-r;
+#X msg 410 104 1;
+#X obj 410 146 s \$0-ncols-r;
+#X text 13 205 Store:;
+#X text 13 36 Recall:;
+#X obj 59 37 bng 15 250 50 0 \$0-load-s \$0-load-r empty 17 7 0 10
+-262144 -1 -1;
+#X obj 352 308 r \$0-load-s;
+#X obj 352 330 openpanel;
+#X msg 352 352 read \$1;
+#X obj 352 374 s \$0-pattern;
+#X obj 123 15 r \$0-pattern;
+#X obj 432 330 savepanel;
+#X msg 432 352 write \$1;
+#X obj 59 205 bng 15 250 50 0 \$0-write-s \$0-write-r empty 17 7 0
+10 -262144 -1 -1;
+#X obj 432 308 r \$0-write-s;
+#X obj 123 339 outlet;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X coords 0 -1 1 1 98 21 2 100 100;
+#X restore 10 10 pd;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X coords 0 -1 1 1 98 123 2 100 100;
+#X restore 10 76 pd;
+#X connect 1 0 2 0;
+#X connect 2 0 42 0;
+#X connect 3 1 1 0;
+#X connect 5 0 17 0;
+#X connect 7 0 5 0;
+#X connect 13 0 7 0;
+#X connect 14 0 5 0;
+#X connect 15 0 16 0;
+#X connect 17 0 5 0;
+#X connect 17 0 3 0;
+#X connect 18 0 19 0;
+#X connect 19 0 17 0;
+#X connect 20 0 22 0;
+#X connect 21 0 22 1;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 17 0;
+#X connect 26 0 28 0;
+#X connect 28 0 27 0;
+#X connect 28 0 29 0;
+#X connect 33 0 34 0;
+#X connect 34 0 35 0;
+#X connect 35 0 36 0;
+#X connect 37 0 4 0;
+#X connect 38 0 39 0;
+#X connect 39 0 36 0;
+#X connect 41 0 38 0;
+#X coords 0 -1 1 1 98 232 2 10 10;

@@ -1,15 +1,11 @@
 #N canvas 435 121 520 448 10;
 #X obj 6 7 xel.header xel.preset;
 #X obj 6 416 xel.footer;
-#X obj 53 255 list prepend set;
-#X obj 53 277 list trim;
-#X msg 53 299 matrix 5 5 0 0 0 0 0.87 0 0 0 0.64 0 0 0 0.82 0 0 0 0.79
-0 0 0 1.11 0 0 0 0, f 38;
+#X obj 53 279 list prepend set;
+#X obj 53 301 list trim;
+#X msg 53 323 Les Chapeaux Noirs, f 38;
 #X msg 53 189 store \$1;
-#X text 53 115 Store a state;
 #X text 24 359 Use -k to save the history with the patch, f 25;
-#X text 127 172 Recall a state;
-#X obj 356 136 loadbang;
 #X text 4 31 The abstraction allows to save and to recall an history
 of matrices of coefficients. The arguments defines the name of the
 text objet that is used to store the history., f 66;
@@ -19,11 +15,28 @@ slots with the last matrice., f 66;
 #X symbolatom 130 190 10 0 0 0 - - -, f 10;
 #X symbolatom 53 172 10 0 0 0 - - -, f 10;
 #X obj 24 389 text define -k \$0-presets;
-#A set;
-#X obj 53 225 xel.preset \$0-presets;
+#A set Spirou Il y a un sorcier à Champignac \; Fantasio Les Chapeaux
+Noirs \; Spip Spirou et les héritiers \; Marsupilami Les Voleurs du
+marsupilami \;;
+#X obj 53 255 xel.preset \$0-presets;
+#X obj 53 152 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 129 222 La Corne de rhinocéros;
+#X text 50 131 Store;
+#X text 127 122 Recall;
+#X msg 130 145 symbol Spirou;
+#X msg 141 167 symbol Fantasio;
+#X msg 220 144 symbol Spip;
+#X msg 242 167 symbol Marsupilami;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
-#X connect 5 0 15 0;
-#X connect 12 0 15 0;
-#X connect 13 0 5 0;
-#X connect 15 0 2 0;
+#X connect 5 0 12 0;
+#X connect 9 0 12 0;
+#X connect 10 0 5 0;
+#X connect 12 0 2 0;
+#X connect 13 0 10 0;
+#X connect 14 0 12 0;
+#X connect 17 0 9 0;
+#X connect 18 0 9 0;
+#X connect 19 0 9 0;
+#X connect 20 0 9 0;
