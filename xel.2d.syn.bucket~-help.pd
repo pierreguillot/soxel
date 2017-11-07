@@ -1,8 +1,8 @@
-#N struct 1005-t-scope float x array cells 1005-t-scope-value;
-#N struct 1005-t-scope-value float x1 float y1 float x2 float y2 float
+#N struct 5650-t-scope float x array cells 5650-t-scope-value;
+#N struct 5650-t-scope-value float x1 float y1 float x2 float y2 float
 c1 float c2;
-#N struct 1069-t-meter float x array ls 1069-t-meter-value;
-#N struct 1069-t-meter-value float x1 float y1 float s1 float s2 float
+#N struct 5714-t-meter float x array ls 5714-t-meter-value;
+#N struct 5714-t-meter-value float x1 float y1 float s1 float s2 float
 s3 float s4 float c0 float c1 float c2 float c3 float c4 float v1 float
 v2 float v3 float v4;
 #N canvas 465 54 717 659 10;
@@ -10,32 +10,32 @@ v2 float v3 float v4;
 #X declare -stdpath spam/zpt;
 #X obj 88 198 dbtorms;
 #X obj 88 178 nbx 5 14 0 100 0 0 empty \$0-gain empty 0 -8 0 10 -262144
--1 -1 60 256;
+-1 -1 81 256;
 #X obj 88 220 pack f 20;
 #X obj 88 242 line~;
 #X obj 14 275 *~, f 11;
 #X obj 166 179 nbx 5 14 1 100 0 0 empty \$0-spread empty 0 -8 0 10
 -262144 -1 -1 9 256;
 #X obj 236 179 nbx 5 14 -1e+37 1e+37 0 0 empty \$0-delay empty 0 -8
-0 10 -262144 -1 -1 250 256;
+0 10 -262144 -1 -1 438 256;
 #X msg 236 198 delay \$1;
 #N canvas 0 22 223 200 \$0-scope 0;
-#X scalar 1005-t-scope 0 \; -1 1 -0.75 0.75 999 0 \; -0.75 1 -0.5 0.75
+#X scalar 5650-t-scope 0 \; -1 1 -0.75 0.75 999 0 \; -0.75 1 -0.5 0.75
 999 0 \; -0.5 1 -0.25 0.75 999 0 \; -0.25 1 0 0.75 999 0 \; 0 1 0.25
-0.75 999 0 \; 0.25 1 0.5 0.75 999 0 \; 0.5 1 0.75 0.75 999 0 \; 0.75
+0.75 90 0 \; 0.25 1 0.5 0.75 90 0 \; 0.5 1 0.75 0.75 999 0 \; 0.75
 1 1 0.75 999 0 \; -1 0.75 -0.75 0.5 999 0 \; -0.75 0.75 -0.5 0.5 999
 0 \; -0.5 0.75 -0.25 0.5 999 0 \; -0.25 0.75 0 0.5 999 0 \; 0 0.75
-0.25 0.5 999 0 \; 0.25 0.75 0.5 0.5 999 0 \; 0.5 0.75 0.75 0.5 999
-0 \; 0.75 0.75 1 0.5 999 0 \; -1 0.5 -0.75 0.25 999 0 \; -0.75 0.5
--0.5 0.25 999 0 \; -0.5 0.5 -0.25 0.25 999 0 \; -0.25 0.5 0 0.25 999
-0 \; 0 0.5 0.25 0.25 999 0 \; 0.25 0.5 0.5 0.25 999 0 \; 0.5 0.5 0.75
-0.25 999 0 \; 0.75 0.5 1 0.25 999 0 \; -1 0.25 -0.75 -0 999 0 \; -0.75
-0.25 -0.5 -0 999 0 \; -0.5 0.25 -0.25 -0 999 0 \; -0.25 0.25 0 -0 999
-0 \; 0 0.25 0.25 -0 999 0 \; 0.25 0.25 0.5 -0 999 0 \; 0.5 0.25 0.75
--0 999 0 \; 0.75 0.25 1 -0 999 0 \; -1 -0 -0.75 -0.25 999 0 \; -0.75
+0.25 0.5 90 0 \; 0.25 0.75 0.5 0.5 90 0 \; 0.5 0.75 0.75 0.5 999 0
+\; 0.75 0.75 1 0.5 999 0 \; -1 0.5 -0.75 0.25 999 0 \; -0.75 0.5 -0.5
+0.25 999 0 \; -0.5 0.5 -0.25 0.25 999 0 \; -0.25 0.5 0 0.25 999 0 \;
+0 0.5 0.25 0.25 999 0 \; 0.25 0.5 0.5 0.25 999 0 \; 0.5 0.5 0.75 0.25
+999 0 \; 0.75 0.5 1 0.25 999 0 \; -1 0.25 -0.75 -0 999 0 \; -0.75 0.25
+-0.5 -0 999 0 \; -0.5 0.25 -0.25 -0 999 0 \; -0.25 0.25 0 -0 999 0
+\; 0 0.25 0.25 -0 999 0 \; 0.25 0.25 0.5 -0 999 0 \; 0.5 0.25 0.75
+-0 90 0 \; 0.75 0.25 1 -0 950 0 \; -1 -0 -0.75 -0.25 999 0 \; -0.75
 -0 -0.5 -0.25 999 0 \; -0.5 -0 -0.25 -0.25 999 0 \; -0.25 -0 0 -0.25
 999 0 \; 0 -0 0.25 -0.25 999 0 \; 0.25 -0 0.5 -0.25 999 0 \; 0.5 -0
-0.75 -0.25 999 0 \; 0.75 -0 1 -0.25 999 0 \; -1 -0.25 -0.75 -0.5 999
+0.75 -0.25 90 0 \; 0.75 -0 1 -0.25 950 0 \; -1 -0.25 -0.75 -0.5 999
 0 \; -0.75 -0.25 -0.5 -0.5 999 0 \; -0.5 -0.25 -0.25 -0.5 999 0 \;
 -0.25 -0.25 0 -0.5 999 0 \; 0 -0.25 0.25 -0.5 999 0 \; 0.25 -0.25 0.5
 -0.5 999 0 \; 0.5 -0.25 0.75 -0.5 999 0 \; 0.75 -0.25 1 -0.5 999 0
@@ -59,16 +59,16 @@ f 56;
 #X obj 14 562 spam~ 8 ../zpt/zpt.2d.meter~ 8 \$0-meter \$0-config,
 f 56;
 #N canvas 0 22 450 300 \$0-meter 0;
-#X scalar 1069-t-meter 0 \; -0.530331 0.530329 8 16 24 32 555 90 990
-950 900 0 0 0 0 \; -0.75 -1.67489e-06 8 16 24 32 555 90 990 950 900
-0 0 0 0 \; -0.530329 -0.530332 8 16 24 32 555 90 990 950 900 0 0 0
-0 \; 2.51234e-06 -0.75 8 16 24 32 555 90 990 950 900 0 0 0 0 \; 0.530332
--0.530328 8 16 24 32 555 90 990 950 900 0 0 0 0 \; 0.75 3.34978e-06
-8 16 24 32 555 90 990 950 900 0 0 0 0 \; 0.530328 0.530333 8 16 24
-32 555 90 990 950 900 0 0 0 0 \; -4.18723e-06 0.75 8 16 24 32 555 90
-990 950 900 0 0 0 0 \; \;;
+#X scalar 5714-t-meter 0 \; -0.530331 0.530329 8 16 24 32 555 90 990
+950 900 1 0 0 0 \; -0.75 -1.67489e-06 8 16 24 32 555 90 990 950 900
+0 0 0 0 \; -0.530329 -0.530332 8 16 24 32 555 90 990 950 900 1 0 0
+0 \; 2.51234e-06 -0.75 8 16 24 32 555 90 990 950 900 1 0 0 0 \; 0.530332
+-0.530328 8 16 24 32 555 90 990 950 900 1 0 0 0 \; 0.75 3.34978e-06
+8 16 24 32 555 90 990 950 900 1 1 1 1 \; 0.530328 0.530333 8 16 24
+32 555 90 990 950 900 1 0 0 0 \; -4.18723e-06 0.75 8 16 24 32 555 90
+990 950 900 1 0 0 0 \; \;;
 #X coords -1 1 1 -1 153 153 2 100 100;
-#X restore 201 354 pd \$0-meter;
+#X restore 257 354 pd \$0-meter;
 #N canvas 0 22 450 300 init 0;
 #X obj 13 42 loadbang;
 #X obj 13 86 s \$0-gain;
@@ -120,7 +120,7 @@ f 56;
 #X connect 8 0 5 0;
 #X connect 9 0 8 1;
 #X restore 32 223 pd e;
-#X obj 307 275 r \$0-vd;
+#X obj 357 275 r \$0-vd;
 #X obj 236 220 s \$0-vd;
 #X obj 304 220 s \$0-vd;
 #X obj 166 220 s \$0-vd;
@@ -130,7 +130,7 @@ f 56;
 #X msg 166 198 size \$1;
 #X obj 14 180 noise~;
 #X obj 14 541 spam~ 64 xel.2d.proj.dbap~ 8 8 8 \$0-config, f 56;
-#X obj 304 153 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 304 153 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #N canvas 0 22 573 343 trajectory 0;
 #X obj 54 191 t f f, f 15;
@@ -166,19 +166,11 @@ f 56;
 #X connect 13 0 10 0;
 #X restore 304 177 pd trajectory;
 #X obj 14 296 spam~ 64 xel.2d.syn.bucket~ 8 8, f 56;
-#X text 4 27 The abstraction synthesizes the signals of the cells of
-a matrix for a sound source using variable delay lines without flanging
-effect. The goal is to create a spatial smudge effect. When a cell
-is distant from the encoding position the delay increases resulting
-in a sound that is spread progressively from the encoding position
-toward the rest of the space while the sound decreases. The arguments
-are the dimension of the matrix \, the number of rows and the number
-of columns.;
 #N canvas 217 367 450 300 pos 0;
 #X obj 145 100 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 1 256;
+-262144 -1 -1 -0.951055 256;
 #X obj 100 100 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 1 256;
+-262144 -1 -1 0.30902 256;
 #X obj 119 77 t b f;
 #X obj 101 150 pack 1 f;
 #X obj 101 18 r \$0-pos;
@@ -197,6 +189,16 @@ of columns.;
 #X coords 0 -1 1 1 90 14 2 100 100;
 #X restore 304 202 pd pos;
 #X obj 438 538 declare -stdpath spam/zpt;
+#X text 4 135 The arguments are the dimension of the matrix \, the
+number of rows and the number of columns., f 77;
+#X text 4 27 The abstraction synthesizes the signals of the soxels
+with a sound source using variable delay lines without flanging effect.
+The goal is to create a spatial smudge effect., f 77;
+#X text 4 77 When a soxel is distant from the encoding position the
+delay increases resulting in a sound that is spread progressively from
+the encoding position toward the rest of the space while the sound
+decreases., f 77;
+#X obj 490 395 xel.dsp~;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
@@ -227,7 +229,7 @@ of columns.;
 #X connect 26 7 12 7;
 #X connect 26 7 10 7;
 #X connect 27 0 28 0;
-#X connect 28 0 31 0;
+#X connect 28 0 30 0;
 #X connect 29 0 11 0;
 #X connect 29 0 26 0;
 #X connect 29 1 11 1;
@@ -356,5 +358,5 @@ of columns.;
 #X connect 29 62 26 62;
 #X connect 29 63 11 63;
 #X connect 29 63 26 63;
-#X connect 31 0 19 0;
+#X connect 30 0 19 0;
 #X coords 0 659 1 658 85 60 0;
