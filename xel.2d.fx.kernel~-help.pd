@@ -227,7 +227,7 @@ f 37;
 #X restore 584 231 pd \$0-kernel;
 #X obj 284 487 xel.2d.gui.mat \$0-kernel 3 3;
 #X msg 284 311 matrix 5 5;
-#X obj 14 641 spam~ 8 ../zpt/zpt.2d.meter~ 8 \$0-meter \$0-config,
+#X obj 14 641 spam~ 8 xel.2d.gui.meter~ 8 \$0-meter \$0-config,
 f 39;
 #X obj 14 695 dac~ 1 2 3 4 5 6 7 8, f 39;
 #N canvas 0 22 450 300 \$0-meter 0;

@@ -26,6 +26,8 @@ Here is a list of the main abstraction.
 #### Sound Space Visualization
 - [x] xel.2d.gui.scope~: The abstraction displays the rms amplitude of the signals of the soxels inside a canvas.
 
+- [x] xel.2d.gui.meter~: The abstraction displays the contributions of a set of loudspeakers in a space.
+
 #### Matrix Operations
 - [x] xel.2d.gui.mat: The abstraction displays the coefficients of a matrix inside a canvas and allows to interact with them.
 
@@ -42,3 +44,5 @@ Here is a list of the main abstraction.
 - [x] xel.2d.mat.brush: The abstraction applies pattern to a matrices
 
 - [x] xel.2d.gui.mat.brush: The abstraction facilitates the usage of patterns.
+
+- [x] xel.2d.mat.history: The abstraction allows to save and to recall an history of matrices of coefficients.

@@ -95,7 +95,7 @@ v2 float v3 float v4;
 #X obj 329 725 declare -stdpath spam;
 #X obj 5 7 xel.header xel.2d.proj.dbap~;
 #X obj 38 318 spam~ 36 xel.2d.syn.brush~ 6 6, f 39;
-#X obj 38 556 spam~ 8 ../zpt/zpt.2d.meter~ 8 \$0-meter \$0-config,
+#X obj 38 556 spam~ 8 xel.2d.gui.meter~ 8 \$0-meter \$0-config,
 f 39;
 #X obj 38 340 spam~ 36 xel.2d.gui.scope~ 6 6 \$0-scope \$0-config,
 f 39;
