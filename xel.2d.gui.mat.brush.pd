@@ -1,26 +1,25 @@
-#N struct 1032-stuct-matrix float x1 float y1 float x2 float y2 float
+#N struct 1173-stuct-matrix float x1 float y1 float x2 float y2 float
 xv float yv float c1 float c2 float val float index;
-#N struct 1030-struct float x float y symbol name;
 #N canvas 435 73 919 705 10;
 #N canvas 0 22 450 300 \$0-pattern 0;
-#X scalar 1032-stuct-matrix -1 1 -0.333333 0.333333 -0.833333 0.666667
-999 0 5 0 \;;
-#X scalar 1032-stuct-matrix -0.333333 1 0.333333 0.333333 -0.166667
-0.666667 999 0 5 1 \;;
-#X scalar 1032-stuct-matrix 0.333333 1 1 0.333333 0.5 0.666667 999
-0 5 2 \;;
-#X scalar 1032-stuct-matrix -1 0.333333 -0.333333 -0.333333 -0.833333
--2.98023e-08 999 0 5 3 \;;
-#X scalar 1032-stuct-matrix -0.333333 0.333333 0.333333 -0.333333 -0.166667
--2.98023e-08 999 0 60 4 \;;
-#X scalar 1032-stuct-matrix 0.333333 0.333333 1 -0.333333 0.5 -2.98023e-08
-999 0 5 5 \;;
-#X scalar 1032-stuct-matrix -1 -0.333333 -0.333333 -1 -0.833333 -0.666667
-999 0 5 6 \;;
-#X scalar 1032-stuct-matrix -0.333333 -0.333333 0.333333 -1 -0.166667
--0.666667 999 0 5 7 \;;
-#X scalar 1032-stuct-matrix 0.333333 -0.333333 1 -1 0.5 -0.666667 999
-0 5 8 \;;
+#X scalar 1173-stuct-matrix -1 1 -0.333333 0.333333 -0.833333 0.666667
+999 0 0 0 \;;
+#X scalar 1173-stuct-matrix -0.333333 1 0.333333 0.333333 -0.166667
+0.666667 999 0 0 1 \;;
+#X scalar 1173-stuct-matrix 0.333333 1 1 0.333333 0.5 0.666667 999
+0 0 2 \;;
+#X scalar 1173-stuct-matrix -1 0.333333 -0.333333 -0.333333 -0.833333
+-2.98023e-08 999 0 0 3 \;;
+#X scalar 1173-stuct-matrix -0.333333 0.333333 0.333333 -0.333333 -0.166667
+-2.98023e-08 999 0 0 4 \;;
+#X scalar 1173-stuct-matrix 0.333333 0.333333 1 -0.333333 0.5 -2.98023e-08
+999 0 0 5 \;;
+#X scalar 1173-stuct-matrix -1 -0.333333 -0.333333 -1 -0.833333 -0.666667
+999 0 0 6 \;;
+#X scalar 1173-stuct-matrix -0.333333 -0.333333 0.333333 -1 -0.166667
+-0.666667 999 0 0 7 \;;
+#X scalar 1173-stuct-matrix 0.333333 -0.333333 1 -1 0.5 -0.666667 999
+0 0 8 \;;
 #X coords -1 1 1 -1 111 111 2 100 100;
 #X restore 18 84 pd \$0-pattern;
 #X obj 497 440 xel.preset \$0-patterns;
@@ -33,13 +32,13 @@ xv float yv float c1 float c2 float val float index;
 #X obj 531 483 list trim;
 #X obj 132 135 vradio 15 1 0 4 \$0-filling-mode-s \$0-filling-mode-r
 empty 0 -8 0 10 -262144 -1 -1 0;
-#X text 151 136 fill;
-#X text 151 151 replace;
-#X text 152 165 add;
-#X text 151 180 subtract;
+#X text 147 136 fill;
+#X text 147 151 replace;
+#X text 148 165 add;
+#X text 147 180 subtract;
 #X text 131 118 Mode, f 9;
 #X obj 132 101 nbx 3 14 0 100 0 0 \$0-opacity-s \$0-opacity-r empty
-0 -8 0 10 -262144 -1 -1 75 256;
+0 -8 0 10 -262144 -1 -1 100 256;
 #X text 131 83 Opacity, f 9;
 #X text 170 101 %;
 #X text 91 67 cells;
@@ -148,10 +147,6 @@ f 10;
 #X obj 281 265 symbol;
 #X obj 312 216 r \$0-load-name-s;
 #N canvas 0 22 450 300 \$0-presets-names 0;
-#X scalar 1030-struct 0.025 0 pen \;;
-#X scalar 1030-struct 0.025 6.875 rubber \;;
-#X scalar 1030-struct 0.025 13.75 brush \;;
-#X scalar 1030-struct 0.025 20.625 eraser \;;
 #X coords 0 0 1 110 111 111 2 100 100;
 #X restore 18 235 pd \$0-presets-names;
 #X text 132 234 Store:;

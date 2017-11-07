@@ -1,4 +1,4 @@
-#N canvas 203 126 467 646 10;
+#N canvas 203 126 522 646 10;
 #X obj 6 7 xel.header xel.2d.mat.check;
 #X obj 6 604 xel.footer;
 #X obj 63 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -10,8 +10,7 @@
 -1;
 #X obj 120 514 list prepend set;
 #X obj 120 536 list trim;
-#X msg 120 558 matrix 3 4 0.01 0.02 0.03 0.04 0.05 0.06 0.07 0.08 0.09
-0.01 0.11 0.12;
+#X msg 120 558 5 5;
 #X obj 63 472 xel.2d.mat.check 5 5;
 #X text 4 31 The abstraction checks if the size of the matrix is valid
 and consistent with the number of coefficients. The abstraction ouputs

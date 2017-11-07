@@ -1,60 +1,60 @@
-#N struct 1047-stuct-matrix float x1 float y1 float x2 float y2 float
+#N struct 1228-stuct-matrix float x1 float y1 float x2 float y2 float
 xv float yv float c1 float c2 float val float index;
 #N canvas 281 37 603 578 10;
 #X obj 5 7 xel.header xel.2d.gui.mat;
 #X obj 6 504 xel.footer;
 #N canvas 0 22 1029 742 \$0-canvas 0;
-#X scalar 1047-stuct-matrix -1 1 -0.6 0.6 -0.9 0.8 999 0 0 0 \;;
-#X scalar 1047-stuct-matrix -0.6 1 -0.2 0.6 -0.5 0.8 999 0 0 1 \;;
-#X scalar 1047-stuct-matrix -0.2 1 0.2 0.6 -0.1 0.8 999 0 0 2 \;;
-#X scalar 1047-stuct-matrix 0.2 1 0.6 0.6 0.3 0.8 999 0 0 3 \;;
-#X scalar 1047-stuct-matrix 0.6 1 1 0.6 0.7 0.8 999 0 0 4 \;;
-#X scalar 1047-stuct-matrix -1 0.6 -0.6 0.2 -0.9 0.4 999 0 0 5 \;;
-#X scalar 1047-stuct-matrix -0.6 0.6 -0.2 0.2 -0.5 0.4 999 0 0 6 \;
+#X scalar 1228-stuct-matrix -1 1 -0.6 0.6 -0.9 0.8 999 0 0 0 \;;
+#X scalar 1228-stuct-matrix -0.6 1 -0.2 0.6 -0.5 0.8 999 0 0 1 \;;
+#X scalar 1228-stuct-matrix -0.2 1 0.2 0.6 -0.1 0.8 999 0 0 2 \;;
+#X scalar 1228-stuct-matrix 0.2 1 0.6 0.6 0.3 0.8 999 0 0 3 \;;
+#X scalar 1228-stuct-matrix 0.6 1 1 0.6 0.7 0.8 999 0 0 4 \;;
+#X scalar 1228-stuct-matrix -1 0.6 -0.6 0.2 -0.9 0.4 999 0 0 5 \;;
+#X scalar 1228-stuct-matrix -0.6 0.6 -0.2 0.2 -0.5 0.4 999 0 0 6 \;
 ;
-#X scalar 1047-stuct-matrix -0.2 0.6 0.2 0.2 -0.1 0.4 999 0 50 7 \;
+#X scalar 1228-stuct-matrix -0.2 0.6 0.2 0.2 -0.1 0.4 999 0 0 7 \;
 ;
-#X scalar 1047-stuct-matrix 0.2 0.6 0.6 0.2 0.3 0.4 999 0 38 8 \;;
-#X scalar 1047-stuct-matrix 0.6 0.6 1 0.2 0.7 0.4 999 0 0 9 \;;
-#X scalar 1047-stuct-matrix -1 0.2 -0.6 -0.2 -0.9 -1.49012e-08 999
+#X scalar 1228-stuct-matrix 0.2 0.6 0.6 0.2 0.3 0.4 999 0 0 8 \;;
+#X scalar 1228-stuct-matrix 0.6 0.6 1 0.2 0.7 0.4 999 0 0 9 \;;
+#X scalar 1228-stuct-matrix -1 0.2 -0.6 -0.2 -0.9 -1.49012e-08 999
 0 0 10 \;;
-#X scalar 1047-stuct-matrix -0.6 0.2 -0.2 -0.2 -0.5 -1.49012e-08 999
+#X scalar 1228-stuct-matrix -0.6 0.2 -0.2 -0.2 -0.5 -1.49012e-08 999
 0 0 11 \;;
-#X scalar 1047-stuct-matrix -0.2 0.2 0.2 -0.2 -0.1 -1.49012e-08 999
+#X scalar 1228-stuct-matrix -0.2 0.2 0.2 -0.2 -0.1 -1.49012e-08 999
 0 0 12 \;;
-#X scalar 1047-stuct-matrix 0.2 0.2 0.6 -0.2 0.3 -1.49012e-08 999 0
-24 13 \;;
-#X scalar 1047-stuct-matrix 0.6 0.2 1 -0.2 0.7 -1.49012e-08 999 0 0
+#X scalar 1228-stuct-matrix 0.2 0.2 0.6 -0.2 0.3 -1.49012e-08 999 0
+0 13 \;;
+#X scalar 1228-stuct-matrix 0.6 0.2 1 -0.2 0.7 -1.49012e-08 999 0 0
 14 \;;
-#X scalar 1047-stuct-matrix -1 -0.2 -0.6 -0.6 -0.9 -0.4 999 0 0 15
+#X scalar 1228-stuct-matrix -1 -0.2 -0.6 -0.6 -0.9 -0.4 999 0 0 15
 \;;
-#X scalar 1047-stuct-matrix -0.6 -0.2 -0.2 -0.6 -0.5 -0.4 999 0 0 16
+#X scalar 1228-stuct-matrix -0.6 -0.2 -0.2 -0.6 -0.5 -0.4 999 0 0 16
 \;;
-#X scalar 1047-stuct-matrix -0.2 -0.2 0.2 -0.6 -0.1 -0.4 999 0 0 17
+#X scalar 1228-stuct-matrix -0.2 -0.2 0.2 -0.6 -0.1 -0.4 999 0 0 17
 \;;
-#X scalar 1047-stuct-matrix 0.2 -0.2 0.6 -0.6 0.3 -0.4 999 0 0 18 \;
+#X scalar 1228-stuct-matrix 0.2 -0.2 0.6 -0.6 0.3 -0.4 999 0 0 18 \;
 ;
-#X scalar 1047-stuct-matrix 0.6 -0.2 1 -0.6 0.7 -0.4 999 0 0 19 \;
+#X scalar 1228-stuct-matrix 0.6 -0.2 1 -0.6 0.7 -0.4 999 0 0 19 \;
 ;
-#X scalar 1047-stuct-matrix -1 -0.6 -0.6 -1 -0.9 -0.8 999 0 0 20 \;
+#X scalar 1228-stuct-matrix -1 -0.6 -0.6 -1 -0.9 -0.8 999 0 0 20 \;
 ;
-#X scalar 1047-stuct-matrix -0.6 -0.6 -0.2 -1 -0.5 -0.8 999 0 0 21
+#X scalar 1228-stuct-matrix -0.6 -0.6 -0.2 -1 -0.5 -0.8 999 0 0 21
 \;;
-#X scalar 1047-stuct-matrix -0.2 -0.6 0.2 -1 -0.1 -0.8 999 0 0 22 \;
+#X scalar 1228-stuct-matrix -0.2 -0.6 0.2 -1 -0.1 -0.8 999 0 0 22 \;
 ;
-#X scalar 1047-stuct-matrix 0.2 -0.6 0.6 -1 0.3 -0.8 999 0 0 23 \;
+#X scalar 1228-stuct-matrix 0.2 -0.6 0.6 -1 0.3 -0.8 999 0 0 23 \;
 ;
-#X scalar 1047-stuct-matrix 0.6 -0.6 1 -1 0.7 -0.8 999 0 0 24 \;;
+#X scalar 1228-stuct-matrix 0.6 -0.6 1 -1 0.7 -0.8 999 0 0 24 \;;
 #X coords -1 1 1 -1 201 201 2 100 100;
 #X restore 7 238 pd \$0-canvas;
-#X msg 354 273 matrix 5 5;
+#X msg 374 273 matrix 5 5;
 #X msg 283 273 matrix 3 3;
 #X msg 283 243 matrix 1 1;
 #X obj 283 414 list prepend set;
 #X obj 283 436 list trim;
 #X obj 244 312 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 374 243 matrix 3 4;
+#X msg 394 243 matrix 3 4;
 #X text 4 129 The values of the elements of the matrix are multiplied
 by 100 before being displayed to offer a better precision for interacting.
 , f 66;
@@ -66,12 +66,12 @@ number of rows and the number of columns \, and the values of the elements.
 #X msg 343 313 matrix 2 2 0.4 0.5 1.4 1.8;
 #X msg 283 460 matrix 5 5 0 0 0 0 0 0 0 0.5 0.38 0 0 0 0 0.24 0 0 0
 0 0 0 0 0 0 0 0, f 38;
-#X obj 448 367 unpack, f 10;
-#X obj 448 389 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 1 256;
-#X obj 505 389 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 2 256;
-#X text 449 406 Indices of the selected cell, f 16;
+#X obj 476 367 unpack, f 10;
+#X obj 476 389 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 533 389 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X text 477 406 Indices of the selected cell, f 16;
 #X text 4 31 The abstraction displays the coefficients of a matrix
 inside a canvas and allows to interact with them. The first arguments
 is the name of the canvas. The two next arguments are facultative and
