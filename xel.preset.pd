@@ -33,10 +33,10 @@
 #X obj 22 94 list split 1;
 #X obj 56 116 list trim;
 #X obj 22 28 route symbol float delete store, f 32;
-#X obj 116 100 text search \$1;
-#X obj 116 122 moses 0;
-#X obj 116 78 symbol;
-#X obj 155 145 text delete \$1;
+#X obj 132 100 text search \$1;
+#X obj 132 122 moses 0;
+#X obj 132 78 symbol;
+#X obj 171 145 text delete \$1;
 #X connect 0 0 7 0;
 #X connect 2 0 3 0;
 #X connect 3 0 5 0;

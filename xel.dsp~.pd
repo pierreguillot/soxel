@@ -1,8 +1,8 @@
-#N canvas 0 22 450 300 10;
+#N canvas 0 23 450 300 10;
 #X text 11 13 DSP State;
 #X obj 202 89 receive pd;
-#X obj 73 13 tgl 15 0 \$0-dsps \$0-dspr empty 17 7 0 10 -262144 -1
--1 1 1;
+#X obj 83 13 tgl 15 0 \$0-dsps \$0-dspr empty 17 7 0 10 -262144 -1
+-1 0 1;
 #X obj 115 206 r \$0-dsps;
 #X msg 115 228 \; pd dsp \$1;
 #X obj 202 228 s \$0-dspr;
@@ -30,4 +30,4 @@
 #X connect 7 0 6 0;
 #X connect 8 0 7 0;
 #X connect 9 0 7 0;
-#X coords 0 -1 1 1 82 22 2 10 10;
+#X coords 0 -1 1 1 91 21 2 10 10;

@@ -1,95 +1,93 @@
 #N struct 1032-stuct-matrix float x1 float y1 float x2 float y2 float
 xv float yv float c1 float c2 float val float index;
 #N struct 1030-struct float x float y symbol name;
-#N struct 1052-stuct-matrix float x1 float y1 float x2 float y2 float
+#N struct 1056-stuct-matrix float x1 float y1 float x2 float y2 float
 xv float yv float c1 float c2 float val float index;
-#N canvas 276 57 830 707 10;
+#N canvas 472 101 492 610 10;
 #X obj 5 7 xel.header xel.2d.gui.mat.brush;
-#X obj 18 634 xel.footer;
-#X obj 5 132 xel.2d.gui.mat.brush;
+#X obj 8 574 xel.footer;
+#X obj 5 62 xel.2d.gui.mat.brush;
 #N canvas 0 22 1029 742 \$0-canvas 0;
-#X scalar 1052-stuct-matrix -1 1 -0.6 0.6 -0.9 0.8 999 0 5 0 \;;
-#X scalar 1052-stuct-matrix -0.6 1 -0.2 0.6 -0.5 0.8 999 0 10 1 \;
+#X scalar 1056-stuct-matrix -1 1 -0.6 0.6 -0.9 0.8 999 0 0 0 \;;
+#X scalar 1056-stuct-matrix -0.6 1 -0.2 0.6 -0.5 0.8 999 0 0 1 \;;
+#X scalar 1056-stuct-matrix -0.2 1 0.2 0.6 -0.1 0.8 999 0 0 2 \;;
+#X scalar 1056-stuct-matrix 0.2 1 0.6 0.6 0.3 0.8 999 0 0 3 \;;
+#X scalar 1056-stuct-matrix 0.6 1 1 0.6 0.7 0.8 999 0 0 4 \;;
+#X scalar 1056-stuct-matrix -1 0.6 -0.6 0.2 -0.9 0.4 999 0 0 5 \;;
+#X scalar 1056-stuct-matrix -0.6 0.6 -0.2 0.2 -0.5 0.4 999 0 0 6 \;
 ;
-#X scalar 1052-stuct-matrix -0.2 1 0.2 0.6 -0.1 0.8 999 0 15 2 \;;
-#X scalar 1052-stuct-matrix 0.2 1 0.6 0.6 0.3 0.8 999 0 10 3 \;;
-#X scalar 1052-stuct-matrix 0.6 1 1 0.6 0.7 0.8 999 0 5 4 \;;
-#X scalar 1052-stuct-matrix -1 0.6 -0.6 0.2 -0.9 0.4 999 0 0 5 \;;
-#X scalar 1052-stuct-matrix -0.6 0.6 -0.2 0.2 -0.5 0.4 999 0 0 6 \;
+#X scalar 1056-stuct-matrix -0.2 0.6 0.2 0.2 -0.1 0.4 999 0 0 7 \;
 ;
-#X scalar 1052-stuct-matrix -0.2 0.6 0.2 0.2 -0.1 0.4 999 0 0 7 \;
-;
-#X scalar 1052-stuct-matrix 0.2 0.6 0.6 0.2 0.3 0.4 999 0 0 8 \;;
-#X scalar 1052-stuct-matrix 0.6 0.6 1 0.2 0.7 0.4 999 0 0 9 \;;
-#X scalar 1052-stuct-matrix -1 0.2 -0.6 -0.2 -0.9 -1.49012e-08 999
+#X scalar 1056-stuct-matrix 0.2 0.6 0.6 0.2 0.3 0.4 999 0 0 8 \;;
+#X scalar 1056-stuct-matrix 0.6 0.6 1 0.2 0.7 0.4 999 0 0 9 \;;
+#X scalar 1056-stuct-matrix -1 0.2 -0.6 -0.2 -0.9 -1.49012e-08 999
 0 0 10 \;;
-#X scalar 1052-stuct-matrix -0.6 0.2 -0.2 -0.2 -0.5 -1.49012e-08 999
+#X scalar 1056-stuct-matrix -0.6 0.2 -0.2 -0.2 -0.5 -1.49012e-08 999
 0 0 11 \;;
-#X scalar 1052-stuct-matrix -0.2 0.2 0.2 -0.2 -0.1 -1.49012e-08 999
+#X scalar 1056-stuct-matrix -0.2 0.2 0.2 -0.2 -0.1 -1.49012e-08 999
 0 0 12 \;;
-#X scalar 1052-stuct-matrix 0.2 0.2 0.6 -0.2 0.3 -1.49012e-08 999 0
+#X scalar 1056-stuct-matrix 0.2 0.2 0.6 -0.2 0.3 -1.49012e-08 999 0
 0 13 \;;
-#X scalar 1052-stuct-matrix 0.6 0.2 1 -0.2 0.7 -1.49012e-08 999 0 0
+#X scalar 1056-stuct-matrix 0.6 0.2 1 -0.2 0.7 -1.49012e-08 999 0 0
 14 \;;
-#X scalar 1052-stuct-matrix -1 -0.2 -0.6 -0.6 -0.9 -0.4 999 0 0 15
+#X scalar 1056-stuct-matrix -1 -0.2 -0.6 -0.6 -0.9 -0.4 999 0 100 15
 \;;
-#X scalar 1052-stuct-matrix -0.6 -0.2 -0.2 -0.6 -0.5 -0.4 999 0 0 16
+#X scalar 1056-stuct-matrix -0.6 -0.2 -0.2 -0.6 -0.5 -0.4 999 0 0 16
 \;;
-#X scalar 1052-stuct-matrix -0.2 -0.2 0.2 -0.6 -0.1 -0.4 999 0 0 17
+#X scalar 1056-stuct-matrix -0.2 -0.2 0.2 -0.6 -0.1 -0.4 999 0 0 17
 \;;
-#X scalar 1052-stuct-matrix 0.2 -0.2 0.6 -0.6 0.3 -0.4 999 0 0 18 \;
+#X scalar 1056-stuct-matrix 0.2 -0.2 0.6 -0.6 0.3 -0.4 999 0 0 18 \;
 ;
-#X scalar 1052-stuct-matrix 0.6 -0.2 1 -0.6 0.7 -0.4 999 0 0 19 \;
+#X scalar 1056-stuct-matrix 0.6 -0.2 1 -0.6 0.7 -0.4 999 0 100 19 \;
 ;
-#X scalar 1052-stuct-matrix -1 -0.6 -0.6 -1 -0.9 -0.8 999 0 0 20 \;
-;
-#X scalar 1052-stuct-matrix -0.6 -0.6 -0.2 -1 -0.5 -0.8 999 0 0 21
+#X scalar 1056-stuct-matrix -1 -0.6 -0.6 -1 -0.9 -0.8 999 0 100 20
 \;;
-#X scalar 1052-stuct-matrix -0.2 -0.6 0.2 -1 -0.1 -0.8 999 0 0 22 \;
+#X scalar 1056-stuct-matrix -0.6 -0.6 -0.2 -1 -0.5 -0.8 999 0 0 21
+\;;
+#X scalar 1056-stuct-matrix -0.2 -0.6 0.2 -1 -0.1 -0.8 999 0 0 22 \;
 ;
-#X scalar 1052-stuct-matrix 0.2 -0.6 0.6 -1 0.3 -0.8 999 0 0 23 \;
+#X scalar 1056-stuct-matrix 0.2 -0.6 0.6 -1 0.3 -0.8 999 0 0 23 \;
 ;
-#X scalar 1052-stuct-matrix 0.6 -0.6 1 -1 0.7 -0.8 999 0 0 24 \;;
+#X scalar 1056-stuct-matrix 0.6 -0.6 1 -1 0.7 -0.8 999 0 16 24 \;;
 #X coords -1 1 1 -1 201 201 2 100 100;
-#X restore 221 132 pd \$0-canvas;
-#X obj 5 478 unpack f s;
-#X obj 5 502 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#X restore 221 62 pd \$0-canvas;
+#X obj 5 412 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 1 256;
-#X text 4 31 comment, f 66;
-#X msg 170 552 matrix 5 5 0.05 0.1 0.15 0.1 0.05 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0, f 30;
-#X obj 280 499 xel.2d.mat.brush 5 5;
-#X obj 170 504 list prepend set;
-#X obj 170 526 list trim;
-#X obj 280 433 pack f f 1;
-#X obj 280 475 list trim;
-#X obj 280 453 list prepend;
-#X obj 280 521 xel.2d.gui.mat \$0-canvas 5 5 -1 1;
-#X obj 5 544 s \$0-opacity;
-#X symbolatom 62 502 10 0 0 0 - - -, f 10;
-#X obj 62 521 s \$0-mode;
-#X obj 349 433 r \$0-mode;
-#X obj 337 412 r \$0-opacity;
-#X obj 195 474 s \$0-pattern;
-#X obj 341 475 r \$0-pattern;
-#X obj 475 542 s \$0-position;
-#X obj 280 390 r \$0-position;
+#X msg 170 482 matrix 5 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1
+0 0 0 0.161, f 30;
+#X obj 280 429 xel.2d.mat.brush 5 5;
+#X obj 170 434 list prepend set;
+#X obj 170 456 list trim;
+#X obj 280 363 pack f f 1;
+#X obj 280 405 list trim;
+#X obj 280 383 list prepend;
+#X obj 5 431 s \$0-opacity;
+#X obj 349 363 r \$0-mode;
+#X obj 337 342 r \$0-opacity;
+#X obj 195 404 s \$0-pattern;
+#X obj 341 405 r \$0-pattern;
+#X obj 394 472 s \$0-position;
+#X obj 280 320 r \$0-position;
+#X obj 280 451 xel.2d.gui.mat \$0-canvas 5 5 0 1;
+#X symbolatom 100 412 10 0 0 0 - - -, f 10;
+#X obj 100 431 s \$0-mode;
+#X text 4 31 The abstraction facilitates the usage of patterns., f
+66;
 #X connect 2 0 4 0;
 #X connect 2 1 20 0;
-#X connect 4 0 5 0;
-#X connect 4 1 16 0;
-#X connect 5 0 15 0;
-#X connect 8 0 14 0;
-#X connect 9 0 10 0;
-#X connect 10 0 8 0;
-#X connect 10 0 7 0;
-#X connect 11 0 13 0;
-#X connect 12 0 8 0;
-#X connect 13 0 12 0;
-#X connect 14 0 9 0;
-#X connect 14 1 22 0;
-#X connect 16 0 17 0;
-#X connect 18 0 13 1;
-#X connect 19 0 11 2;
-#X connect 21 0 8 0;
-#X connect 23 0 11 0;
+#X connect 2 2 15 0;
+#X connect 4 0 12 0;
+#X connect 6 0 19 0;
+#X connect 7 0 8 0;
+#X connect 8 0 6 0;
+#X connect 8 0 5 0;
+#X connect 9 0 11 0;
+#X connect 10 0 6 0;
+#X connect 11 0 10 0;
+#X connect 13 0 11 1;
+#X connect 14 0 9 2;
+#X connect 16 0 6 0;
+#X connect 18 0 9 0;
+#X connect 19 0 7 0;
+#X connect 19 1 17 0;
+#X connect 20 0 21 0;

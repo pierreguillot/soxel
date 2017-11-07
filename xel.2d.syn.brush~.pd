@@ -59,7 +59,7 @@
 #X connect 7 0 6 0;
 #X connect 7 1 6 1;
 #X restore 27 257 pd opacity;
-#N canvas 175 156 450 367 hardness 0;
+#N canvas 175 156 450 367 hardness 1;
 #X obj 46 39 spam.in 0;
 #X obj 46 61 route hardness;
 #X obj 46 83 clip 0 100;

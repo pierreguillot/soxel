@@ -1,33 +1,33 @@
-#N canvas 435 121 520 448 10;
+#N canvas 435 121 544 532 10;
 #X obj 6 7 xel.header xel.preset;
-#X obj 6 416 xel.footer;
-#X obj 53 279 list prepend set;
-#X obj 53 301 list trim;
-#X msg 53 323 Les Chapeaux Noirs, f 38;
-#X msg 53 189 store \$1;
-#X text 24 359 Use -k to save the history with the patch, f 25;
+#X obj 6 486 xel.footer;
+#X obj 11 319 list prepend set;
+#X obj 11 341 list trim;
+#X msg 11 363 Les Voleurs du marsupilami, f 38;
+#X msg 11 189 store \$1;
+#X text 6 430 Use -k to save the history with the patch, f 25;
 #X text 4 31 The abstraction allows to save and to recall an history
 of matrices of coefficients. The arguments defines the name of the
 text objet that is used to store the history., f 66;
 #X text 4 71 When a new matrix is stored if its index is beyond the
 current number of stored matrices \, the abstraction fills the empty
 slots with the last matrice., f 66;
-#X symbolatom 130 190 10 0 0 0 - - -, f 10;
-#X symbolatom 53 172 10 0 0 0 - - -, f 10;
-#X obj 24 389 text define -k \$0-presets;
+#X symbolatom 88 240 12 0 0 0 - - -, f 12;
+#X symbolatom 11 172 10 0 0 0 - - -, f 10;
+#X obj 6 460 text define -k \$0-presets;
 #A set Spirou Il y a un sorcier à Champignac \; Fantasio Les Chapeaux
 Noirs \; Spip Spirou et les héritiers \; Marsupilami Les Voleurs du
 marsupilami \;;
-#X obj 53 255 xel.preset \$0-presets;
-#X obj 53 152 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 11 295 xel.preset \$0-presets;
+#X obj 11 152 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X msg 129 222 La Corne de rhinocéros;
-#X text 50 131 Store;
-#X text 127 122 Recall;
-#X msg 130 145 symbol Spirou;
-#X msg 141 167 symbol Fantasio;
-#X msg 220 144 symbol Spip;
-#X msg 242 167 symbol Marsupilami;
+#X msg 87 262 La Corne de rhinocéros;
+#X text 8 131 Store;
+#X text 85 122 Recall;
+#X msg 88 145 symbol Spirou;
+#X msg 99 167 symbol Fantasio;
+#X msg 114 191 symbol Spip;
+#X msg 132 214 symbol Marsupilami;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X connect 5 0 12 0;

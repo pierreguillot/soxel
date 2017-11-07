@@ -1,26 +1,26 @@
-#N struct 1030-t-scope float x array cells 1030-t-scope-value;
-#N struct 1030-t-scope-value float x1 float y1 float x2 float y2 float
+#N struct 1105-t-scope float x array cells 1105-t-scope-value;
+#N struct 1105-t-scope-value float x1 float y1 float x2 float y2 float
 c1 float c2;
-#N struct 1056-t-scope float x array cells 1056-t-scope-value;
-#N struct 1056-t-scope-value float x1 float y1 float x2 float y2 float
+#N struct 1131-t-scope float x array cells 1131-t-scope-value;
+#N struct 1131-t-scope-value float x1 float y1 float x2 float y2 float
 c1 float c2;
-#N struct 1081-stuct-matrix float x1 float y1 float x2 float y2 float
+#N struct 1156-stuct-matrix float x1 float y1 float x2 float y2 float
 xv float yv float c1 float c2 float val float index;
 #N struct 1084-t-meter float x array ls 1084-t-meter-value;
 #N struct 1084-t-meter-value float x1 float y1 float s1 float s2 float
 s3 float s4 float c0 float c1 float c2 float c3 float c4 float v1 float
 v2 float v3 float v4;
-#N canvas 316 142 1031 814 10;
+#N canvas 286 34 1031 814 10;
 #X declare -stdpath spam;
 #N canvas 0 22 223 200 \$0-scope 0;
-#X scalar 1030-t-scope 0 \; -1 1 -0.6 0.6 999 0 \; -0.6 1 -0.2 0.6
+#X scalar 1105-t-scope 0 \; -1 1 -0.6 0.6 999 0 \; -0.6 1 -0.2 0.6
 999 0 \; -0.2 1 0.2 0.6 999 0 \; 0.2 1 0.6 0.6 999 0 \; 0.6 1 1 0.6
-999 0 \; -1 0.6 -0.6 0.2 999 0 \; -0.6 0.6 -0.2 0.2 950 0 \; -0.2 0.6
-0.2 0.2 950 0 \; 0.2 0.6 0.6 0.2 950 0 \; 0.6 0.6 1 0.2 999 0 \; -1
-0.2 -0.6 -0.2 999 0 \; -0.6 0.2 -0.2 -0.2 950 0 \; -0.2 0.2 0.2 -0.2
-950 0 \; 0.2 0.2 0.6 -0.2 950 0 \; 0.6 0.2 1 -0.2 999 0 \; -1 -0.2
--0.6 -0.6 999 0 \; -0.6 -0.2 -0.2 -0.6 950 0 \; -0.2 -0.2 0.2 -0.6
-950 0 \; 0.2 -0.2 0.6 -0.6 950 0 \; 0.6 -0.2 1 -0.6 999 0 \; -1 -0.6
+999 0 \; -1 0.6 -0.6 0.2 999 0 \; -0.6 0.6 -0.2 0.2 999 0 \; -0.2 0.6
+0.2 0.2 999 0 \; 0.2 0.6 0.6 0.2 999 0 \; 0.6 0.6 1 0.2 999 0 \; -1
+0.2 -0.6 -0.2 999 0 \; -0.6 0.2 -0.2 -0.2 999 0 \; -0.2 0.2 0.2 -0.2
+900 0 \; 0.2 0.2 0.6 -0.2 999 0 \; 0.6 0.2 1 -0.2 999 0 \; -1 -0.2
+-0.6 -0.6 999 0 \; -0.6 -0.2 -0.2 -0.6 999 0 \; -0.2 -0.2 0.2 -0.6
+999 0 \; 0.2 -0.2 0.6 -0.6 999 0 \; 0.6 -0.2 1 -0.6 999 0 \; -1 -0.6
 -0.6 -1 999 0 \; -0.6 -0.6 -0.2 -1 999 0 \; -0.2 -0.6 0.2 -1 999 0
 \; 0.2 -0.6 0.6 -1 999 0 \; 0.6 -0.6 1 -1 999 0 \; \;;
 #X coords -1 1 1 -1 201 201 2 100 100;
@@ -144,13 +144,13 @@ v2 float v3 float v4;
 #X restore 107 127 pd pos;
 #X msg 285 147 opacity \$1;
 #X obj 285 125 nbx 5 14 0 100 0 0 empty \$0-opacity empty 0 -8 0 10
--262144 -1 -1 64 256;
+-262144 -1 -1 100 256;
 #X obj 360 125 nbx 5 14 0 100 0 0 empty \$0-hardness empty 0 -8 0 10
 -262144 -1 -1 100 256;
 #X msg 360 147 hardness \$1;
 #X obj 360 169 s \$0-brush;
 #X obj 207 127 nbx 5 14 1 10 0 0 empty \$0-size empty 0 -8 0 10 -262144
--1 -1 2.05 256;
+-1 -1 1 256;
 #X msg 207 146 size \$1;
 #X text 206 88 Size (min 1), f 8;
 #X text 360 86 Hardness (0 to 100), f 10;
@@ -165,42 +165,42 @@ f 37;
 -1 -1;
 #X obj 537 431 spam.connect;
 #N canvas 0 22 450 300 \$0-scope-2 0;
-#X scalar 1056-t-scope 0 \; -1 1 -0.6 0.6 950 0 \; -0.6 1 -0.2 0.6
-900 0 \; -0.2 1 0.2 0.6 900 0 \; 0.2 1 0.6 0.6 990 0 \; 0.6 1 1 0.6
-999 0 \; -1 0.6 -0.6 0.2 900 0 \; -0.6 0.6 -0.2 0.2 900 0 \; -0.2 0.6
-0.2 0.2 950 0 \; 0.2 0.6 0.6 0.2 990 0 \; 0.6 0.6 1 0.2 990 0 \; -1
-0.2 -0.6 -0.2 900 0 \; -0.6 0.2 -0.2 -0.2 950 0 \; -0.2 0.2 0.2 -0.2
-990 0 \; 0.2 0.2 0.6 -0.2 900 0 \; 0.6 0.2 1 -0.2 900 0 \; -1 -0.2
--0.6 -0.6 990 0 \; -0.6 -0.2 -0.2 -0.6 990 0 \; -0.2 -0.2 0.2 -0.6
-900 0 \; 0.2 -0.2 0.6 -0.6 900 0 \; 0.6 -0.2 1 -0.6 900 0 \; -1 -0.6
--0.6 -1 999 0 \; -0.6 -0.6 -0.2 -1 990 0 \; -0.2 -0.6 0.2 -1 900 0
-\; 0.2 -0.6 0.6 -1 900 0 \; 0.6 -0.6 1 -1 950 0 \; \;;
+#X scalar 1131-t-scope 0 \; -1 1 -0.6 0.6 999 0 \; -0.6 1 -0.2 0.6
+999 0 \; -0.2 1 0.2 0.6 999 0 \; 0.2 1 0.6 0.6 999 0 \; 0.6 1 1 0.6
+999 0 \; -1 0.6 -0.6 0.2 999 0 \; -0.6 0.6 -0.2 0.2 90 0 \; -0.2 0.6
+0.2 0.2 90 0 \; 0.2 0.6 0.6 0.2 90 0 \; 0.6 0.6 1 0.2 999 0 \; -1 0.2
+-0.6 -0.2 999 0 \; -0.6 0.2 -0.2 -0.2 90 0 \; -0.2 0.2 0.2 -0.2 90
+0 \; 0.2 0.2 0.6 -0.2 90 0 \; 0.6 0.2 1 -0.2 999 0 \; -1 -0.2 -0.6
+-0.6 999 0 \; -0.6 -0.2 -0.2 -0.6 90 0 \; -0.2 -0.2 0.2 -0.6 90 0 \;
+0.2 -0.2 0.6 -0.6 90 0 \; 0.6 -0.2 1 -0.6 999 0 \; -1 -0.6 -0.6 -1
+999 0 \; -0.6 -0.6 -0.2 -1 999 0 \; -0.2 -0.6 0.2 -1 999 0 \; 0.2 -0.6
+0.6 -1 999 0 \; 0.6 -0.6 1 -1 999 0 \; \;;
 #X coords -1 1 1 -1 201 201 2 100 100;
 #X restore 624 533 pd \$0-scope-2;
 #X obj 14 490 spam~ 25 xel.2d.gui.scope~ 5 5 \$0-scope-2 \$0-config
 , f 39;
 #X msg 573 80 \; pd dsp \$1;
-#X obj 560 49 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 560 49 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #N canvas 0 22 450 300 \$0-kernel 0;
-#X scalar 1081-stuct-matrix -1 1 -0.333333 0.333333 -0.833333 0.666667
-999 0 -100 0 \;;
-#X scalar 1081-stuct-matrix -0.333333 1 0.333333 0.333333 -0.166667
-0.666667 999 0 -50 1 \;;
-#X scalar 1081-stuct-matrix 0.333333 1 1 0.333333 0.5 0.666667 999
-0 0 2 \;;
-#X scalar 1081-stuct-matrix -1 0.333333 -0.333333 -0.333333 -0.833333
--2.98023e-08 999 0 -50 3 \;;
-#X scalar 1081-stuct-matrix -0.333333 0.333333 0.333333 -0.333333 -0.166667
--2.98023e-08 999 0 50 4 \;;
-#X scalar 1081-stuct-matrix 0.333333 0.333333 1 -0.333333 0.5 -2.98023e-08
-999 0 50 5 \;;
-#X scalar 1081-stuct-matrix -1 -0.333333 -0.333333 -1 -0.833333 -0.666667
-999 0 0 6 \;;
-#X scalar 1081-stuct-matrix -0.333333 -0.333333 0.333333 -1 -0.166667
--0.666667 999 0 50 7 \;;
-#X scalar 1081-stuct-matrix 0.333333 -0.333333 1 -1 0.5 -0.666667 999
-0 100 8 \;;
+#X scalar 1156-stuct-matrix -1 1 -0.333333 0.333333 -0.833333 0.666667
+999 0 -8 0 \;;
+#X scalar 1156-stuct-matrix -0.333333 1 0.333333 0.333333 -0.166667
+0.666667 999 0 8 1 \;;
+#X scalar 1156-stuct-matrix 0.333333 1 1 0.333333 0.5 0.666667 999
+0 -8 2 \;;
+#X scalar 1156-stuct-matrix -1 0.333333 -0.333333 -0.333333 -0.833333
+-2.98023e-08 999 0 8 3 \;;
+#X scalar 1156-stuct-matrix -0.333333 0.333333 0.333333 -0.333333 -0.166667
+-2.98023e-08 999 0 17 4 \;;
+#X scalar 1156-stuct-matrix 0.333333 0.333333 1 -0.333333 0.5 -2.98023e-08
+999 0 8 5 \;;
+#X scalar 1156-stuct-matrix -1 -0.333333 -0.333333 -1 -0.833333 -0.666667
+999 0 -8 6 \;;
+#X scalar 1156-stuct-matrix -0.333333 -0.333333 0.333333 -1 -0.166667
+-0.666667 999 0 8 7 \;;
+#X scalar 1156-stuct-matrix 0.333333 -0.333333 1 -1 0.5 -0.666667 999
+0 -8 8 \;;
 #X coords -1 1 1 -1 201 201 2 100 100;
 #X restore 624 328 pd \$0-kernel;
 #X obj 245 434 xel.2d.gui.mat \$0-kernel 3 3;
@@ -226,13 +226,8 @@ f 39;
 #X obj 431 518 xel.2d.mat.blur.box;
 #X msg 511 494 matrix \$1 \$1;
 #X obj 527 459 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj 460 552 metro 5000;
-#X obj 462 522 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+-262144 -1 -1 5 256;
 #X msg 291 482 ramp 5000;
-#X obj 460 574 f 7;
-#X obj 500 574 + 2;
 #X msg 396 389 matrix 3 3;
 #X msg 476 389 matrix \$1 \$1;
 #X obj 492 354 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
@@ -240,10 +235,10 @@ f 39;
 #X obj 396 413 xel.2d.mat.blur.gaussian;
 #X msg 554 371 deviation \$1;
 #X obj 561 342 nbx 5 14 0.001 3 0 0 empty empty empty 0 -8 0 10 -262144
--1 -1 0.001 256;
-#X msg 479 699 deviation \$1;
-#X obj 486 670 nbx 5 14 0.001 3 0 0 empty empty empty 0 -8 0 10 -262144
--1 -1 0.001 256;
+-1 -1 0.221 256;
+#X msg 400 571 deviation \$1;
+#X obj 407 542 nbx 5 14 0.001 3 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 1.531 256;
 #X obj 408 620 xel.2d.mat.fltr.log 3 3;
 #X obj 330 394 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -251,8 +246,8 @@ f 39;
 #X msg 276 219 matrix 3 3;
 #X obj 276 265 list prepend set;
 #X obj 276 287 list trim;
-#X msg 276 309 matrix 3 3 0.154276 0.0470716 0.12332 -0.0946075 -0.112146
-0.0329099 0.152001 0.167427 0.116242;
+#X msg 276 309 matrix 3 3 -0.072386 -0.246308 -0.0980843 -0.125776
+0.14612 -0.10116 -0.111362 -0.0441707 0.0546324;
 #X obj 14 456 spam~ 25 xel.2d.fx.kernel~ 5 5, f 39;
 #X obj 429 207 line~;
 #X msg 350 262 matrix 3 3 -1 -0.5 0 -0.5 0.5 0.5 0 0.5 1;
@@ -273,58 +268,58 @@ f 39;
 #X connect 22 0 23 0;
 #X connect 23 0 27 0;
 #X connect 29 0 30 0;
-#X connect 29 0 71 0;
+#X connect 29 0 67 0;
 #X connect 29 1 30 1;
-#X connect 29 1 71 1;
+#X connect 29 1 67 1;
 #X connect 29 2 30 2;
-#X connect 29 2 71 2;
+#X connect 29 2 67 2;
 #X connect 29 3 30 3;
-#X connect 29 3 71 3;
+#X connect 29 3 67 3;
 #X connect 29 4 30 4;
-#X connect 29 4 71 4;
+#X connect 29 4 67 4;
 #X connect 29 5 30 5;
-#X connect 29 5 71 5;
+#X connect 29 5 67 5;
 #X connect 29 6 30 6;
-#X connect 29 6 71 6;
+#X connect 29 6 67 6;
 #X connect 29 7 30 7;
-#X connect 29 7 71 7;
+#X connect 29 7 67 7;
 #X connect 29 8 30 8;
-#X connect 29 8 71 8;
+#X connect 29 8 67 8;
 #X connect 29 9 30 9;
-#X connect 29 9 71 9;
+#X connect 29 9 67 9;
 #X connect 29 10 30 10;
-#X connect 29 10 71 10;
+#X connect 29 10 67 10;
 #X connect 29 11 30 11;
-#X connect 29 11 71 11;
+#X connect 29 11 67 11;
 #X connect 29 12 30 12;
-#X connect 29 12 71 12;
+#X connect 29 12 67 12;
 #X connect 29 13 30 13;
-#X connect 29 13 71 13;
+#X connect 29 13 67 13;
 #X connect 29 14 30 14;
-#X connect 29 14 71 14;
+#X connect 29 14 67 14;
 #X connect 29 15 30 15;
-#X connect 29 15 71 15;
+#X connect 29 15 67 15;
 #X connect 29 16 30 16;
-#X connect 29 16 71 16;
+#X connect 29 16 67 16;
 #X connect 29 17 30 17;
-#X connect 29 17 71 17;
+#X connect 29 17 67 17;
 #X connect 29 18 30 18;
-#X connect 29 18 71 18;
+#X connect 29 18 67 18;
 #X connect 29 19 30 19;
-#X connect 29 19 71 19;
+#X connect 29 19 67 19;
 #X connect 29 20 30 20;
-#X connect 29 20 71 20;
+#X connect 29 20 67 20;
 #X connect 29 21 30 21;
-#X connect 29 21 71 21;
+#X connect 29 21 67 21;
 #X connect 29 22 30 22;
-#X connect 29 22 71 22;
+#X connect 29 22 67 22;
 #X connect 29 23 30 23;
-#X connect 29 23 71 23;
+#X connect 29 23 67 23;
 #X connect 29 24 30 24;
-#X connect 29 24 71 24;
+#X connect 29 24 67 24;
 #X connect 32 0 33 0;
 #X connect 37 0 36 0;
-#X connect 39 0 71 25;
+#X connect 39 0 67 25;
 #X connect 40 0 39 0;
 #X connect 44 0 41 0;
 #X connect 44 0 42 0;
@@ -345,79 +340,75 @@ f 39;
 #X connect 45 0 4 0;
 #X connect 45 0 6 0;
 #X connect 46 0 39 0;
-#X connect 46 0 68 0;
+#X connect 46 0 64 0;
 #X connect 47 0 48 0;
 #X connect 48 0 39 0;
 #X connect 49 0 48 0;
 #X connect 50 0 49 0;
-#X connect 51 0 54 0;
-#X connect 52 0 51 0;
-#X connect 53 0 71 25;
-#X connect 54 0 55 0;
-#X connect 55 0 54 1;
-#X connect 56 0 59 0;
-#X connect 57 0 59 0;
-#X connect 58 0 57 0;
-#X connect 59 0 39 0;
-#X connect 60 0 59 0;
-#X connect 61 0 60 0;
-#X connect 62 0 64 0;
-#X connect 63 0 62 0;
-#X connect 64 0 39 0;
-#X connect 65 0 39 0;
-#X connect 66 0 71 0;
-#X connect 67 0 46 0;
-#X connect 68 0 69 0;
-#X connect 69 0 70 0;
-#X connect 71 0 35 0;
-#X connect 71 0 44 0;
-#X connect 71 1 35 1;
-#X connect 71 1 44 1;
-#X connect 71 2 35 2;
-#X connect 71 2 44 2;
-#X connect 71 3 35 3;
-#X connect 71 3 44 3;
-#X connect 71 4 35 4;
-#X connect 71 4 44 4;
-#X connect 71 5 35 5;
-#X connect 71 5 44 5;
-#X connect 71 6 35 6;
-#X connect 71 6 44 6;
-#X connect 71 7 35 7;
-#X connect 71 7 44 7;
-#X connect 71 8 35 8;
-#X connect 71 8 44 8;
-#X connect 71 9 35 9;
-#X connect 71 9 44 9;
-#X connect 71 10 35 10;
-#X connect 71 10 44 10;
-#X connect 71 11 35 11;
-#X connect 71 11 44 11;
-#X connect 71 12 35 12;
-#X connect 71 12 44 12;
-#X connect 71 13 35 13;
-#X connect 71 13 44 13;
-#X connect 71 14 35 14;
-#X connect 71 14 44 14;
-#X connect 71 15 35 15;
-#X connect 71 15 44 15;
-#X connect 71 16 35 16;
-#X connect 71 16 44 16;
-#X connect 71 17 35 17;
-#X connect 71 17 44 17;
-#X connect 71 18 35 18;
-#X connect 71 18 44 18;
-#X connect 71 19 35 19;
-#X connect 71 19 44 19;
-#X connect 71 20 35 20;
-#X connect 71 20 44 20;
-#X connect 71 21 35 21;
-#X connect 71 21 44 21;
-#X connect 71 22 35 22;
-#X connect 71 22 44 22;
-#X connect 71 23 35 23;
-#X connect 71 23 44 23;
-#X connect 71 24 35 24;
-#X connect 71 24 44 24;
-#X connect 73 0 39 0;
+#X connect 51 0 67 25;
+#X connect 52 0 55 0;
+#X connect 53 0 55 0;
+#X connect 54 0 53 0;
+#X connect 55 0 39 0;
+#X connect 56 0 55 0;
+#X connect 57 0 56 0;
+#X connect 58 0 60 0;
+#X connect 59 0 58 0;
+#X connect 60 0 39 0;
+#X connect 61 0 39 0;
+#X connect 62 0 67 0;
+#X connect 63 0 46 0;
+#X connect 64 0 65 0;
+#X connect 65 0 66 0;
+#X connect 67 0 35 0;
+#X connect 67 0 44 0;
+#X connect 67 1 35 1;
+#X connect 67 1 44 1;
+#X connect 67 2 35 2;
+#X connect 67 2 44 2;
+#X connect 67 3 35 3;
+#X connect 67 3 44 3;
+#X connect 67 4 35 4;
+#X connect 67 4 44 4;
+#X connect 67 5 35 5;
+#X connect 67 5 44 5;
+#X connect 67 6 35 6;
+#X connect 67 6 44 6;
+#X connect 67 7 35 7;
+#X connect 67 7 44 7;
+#X connect 67 8 35 8;
+#X connect 67 8 44 8;
+#X connect 67 9 35 9;
+#X connect 67 9 44 9;
+#X connect 67 10 35 10;
+#X connect 67 10 44 10;
+#X connect 67 11 35 11;
+#X connect 67 11 44 11;
+#X connect 67 12 35 12;
+#X connect 67 12 44 12;
+#X connect 67 13 35 13;
+#X connect 67 13 44 13;
+#X connect 67 14 35 14;
+#X connect 67 14 44 14;
+#X connect 67 15 35 15;
+#X connect 67 15 44 15;
+#X connect 67 16 35 16;
+#X connect 67 16 44 16;
+#X connect 67 17 35 17;
+#X connect 67 17 44 17;
+#X connect 67 18 35 18;
+#X connect 67 18 44 18;
+#X connect 67 19 35 19;
+#X connect 67 19 44 19;
+#X connect 67 20 35 20;
+#X connect 67 20 44 20;
+#X connect 67 21 35 21;
+#X connect 67 21 44 21;
+#X connect 67 22 35 22;
+#X connect 67 22 44 22;
+#X connect 67 23 35 23;
+#X connect 67 23 44 23;
+#X connect 67 24 35 24;
+#X connect 67 24 44 24;
+#X connect 69 0 39 0;
 #X coords 0 814 1 813 85 60 0;
