@@ -138,7 +138,7 @@ v2 float v3 float v4;
 #X obj 14 714 spam~ 36 xel.2d.proj.dbap~ 6 6 8 \$0-config, f 56;
 #X obj 14 532 spam~ 36 xel.2d.gui.scope~ 6 6 \$0-scope \$0-config,
 f 56;
-#X obj 14 735 spam~ 8 ../zpt/zpt.2d.meter~ 8 \$0-meter \$0-config,
+#X obj 14 735 spam~ 8 xel.2d.gui.meter~ 8 \$0-meter \$0-config,
 f 56;
 #N canvas 0 22 450 300 \$0-meter 0;
 #X scalar 7006-t-meter 0 \; -0.530331 0.530329 8 16 24 32 555 90 990

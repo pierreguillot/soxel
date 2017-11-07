@@ -1,8 +1,7 @@
 # soxel
-The **soxel** project  extends the notion of **pixel** and **voxel** to sound spatialization and offers a matrix based spatialization library for Pure Data.
+The **soxel** project  extends the notion of **pixel** and **voxel** to sound spatialization and offers a matrix based spatialization library for [Pd](http://msp.ucsd.edu/software.html). The library needs the [spam](https://github.com/pierreguillot/spam) externals.
 
 ### Features
-Here is a list of the main abstraction.
 
 #### Sound Space Synthesis
 - [x] xel.2d.syn.pencil~: The abstraction synthesizes independently the signals of each soxel with one or several sound sources and depending on the coefficients of one or several matrices.
@@ -26,6 +25,8 @@ Here is a list of the main abstraction.
 #### Sound Space Visualization
 - [x] xel.2d.gui.scope~: The abstraction displays the rms amplitude of the signals of the soxels inside a canvas.
 
+- [x] xel.2d.gui.meter~: The abstraction displays the contributions of a set of loudspeakers in a space.
+
 #### Matrix Operations
 - [x] xel.2d.gui.mat: The abstraction displays the coefficients of a matrix inside a canvas and allows to interact with them.
 
@@ -42,3 +43,5 @@ Here is a list of the main abstraction.
 - [x] xel.2d.mat.brush: The abstraction applies pattern to a matrices
 
 - [x] xel.2d.gui.mat.brush: The abstraction facilitates the usage of patterns.
+
+- [x] xel.2d.mat.history: The abstraction allows to save and to recall an history of matrices of coefficients.

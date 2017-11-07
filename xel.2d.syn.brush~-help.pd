@@ -146,7 +146,7 @@ v2 float v3 float v4;
 #X connect 15 0 13 0;
 #X restore 107 275 pd traj;
 #X obj 32 280 osc~ 5;
-#X obj 14 708 spam~ 8 ../zpt/zpt.2d.meter~ 8 \$0-meter \$0-config,
+#X obj 14 708 spam~ 8 xel.2d.gui.meter~ 8 \$0-meter \$0-config,
 f 51;
 #X obj 14 732 dac~ 1 2 3 4 5 6 7 8, f 51;
 #N canvas 0 22 450 300 \$0-meter 0;
