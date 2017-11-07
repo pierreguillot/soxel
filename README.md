@@ -1,8 +1,7 @@
 # soxel
-The **soxel** project  extends the notion of **pixel** and **voxel** to sound spatialization and offers a matrix based spatialization library for Pure Data.
+The **soxel** project  extends the notion of **pixel** and **voxel** to sound spatialization and offers a matrix based spatialization library for [Pd](). The library needs the [spam] externals.
 
 ### Features
-Here is a list of the main abstraction.
 
 #### Sound Space Synthesis
 - [x] xel.2d.syn.pencil~: The abstraction synthesizes independently the signals of each soxel with one or several sound sources and depending on the coefficients of one or several matrices.
