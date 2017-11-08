@@ -1,5 +1,7 @@
 # soxel
-The **soxel** project  extends the notion of **pixel** and **voxel** to sound spatialization and offers a matrix based spatialization library for [Pd](http://msp.ucsd.edu/software.html). The library needs the [spam](https://github.com/pierreguillot/spam) externals.
+The **soxel** project extends the notion of **pixel** to sound spatialization and offers a matrix based spatialization library for [Pd](http://msp.ucsd.edu/software.html). The library needs the [spam](https://github.com/pierreguillot/spam) externals.
+
+<img width="449" alt="capture d ecran 2017-11-08 a 12 32 22" src="https://user-images.githubusercontent.com/1409918/32546965-0001d568-c481-11e7-9f49-15cf1bdc7a16.png">
 
 ### Features
 
